@@ -4,17 +4,19 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
 }
 
 
 body{
-   width: 100%; 
+   width: 100vw; 
    height: 100vh;
    background-image: url('../img/Untitled.png');
    background-position: top center;
    background-size: cover;
    background-repeat: no-repeat;
    color: #fff;
+   margin: 0;
 }
 .large-header {
     position: absolute;
@@ -25,9 +27,7 @@ body{
     z-index: 0;
 }
 
-canvas {
-    z-index: 0;
-}
+
 .container{
     width: 624px;
     display: flex;

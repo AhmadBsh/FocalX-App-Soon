@@ -26,11 +26,11 @@ let counter = setInterval(() => {
   let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((dateDiff % (1000 * 60)) / 1000);
 
-  document.querySelector("#year").innerHTML = years < 10 ? `0${years}` : years;
   document.querySelector("#month").innerHTML = months < 10 ? `0${months}` : months;
   document.querySelector("#day").innerHTML = days < 10 ? `0${days}` : days;
   document.querySelector("#hour").innerHTML = hours < 10 ? `0${hours}` : hours;
   document.querySelector("#minute").innerHTML = minutes < 10 ? `0${minutes}` : minutes;
+  document.querySelector("#second").innerHTML = seconds < 10 ? `0${seconds}` : seconds;
 
   if (dateDiff < 0) {
     clearInterval(counter);
