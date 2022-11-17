@@ -21,6 +21,9 @@ body{
     display: inline-block;
     background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);;
 }
+a{
+    text-decoration: none;
+}
 #demo-canvas {
     z-index: 2;
 }
@@ -38,26 +41,23 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
     position: relative;
     z-index: 99;
-    /* width: 590px; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    /* padding-left: 34px; */
     padding-top: 30px;
 }
 .container header{
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 367px;
+    column-gap: 318px;
 }
 .lang{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 34px;
-    
 }
 .lang span{   
      width: 2px;
@@ -69,7 +69,6 @@ p::selection {
 .lang button{
     border: none;
     background-color: transparent;
-    
     font-weight:400 ;
     font-size: 1.297rem;
 }
@@ -87,7 +86,6 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-size: 2.5rem;
     padding-top: 64px;
-
 }
 .wrapper section p{
     padding-top: 19px;
@@ -101,9 +99,6 @@ p::selection {
 .wrapper section .p2 span{
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
-}
-.wrapper section .p2 a{
-    text-decoration: none;
 }
 .wrapper .subscribe{
     padding-top: 32px;
@@ -136,9 +131,12 @@ p::selection {
 }
 .wrapper .subscribe form .input::placeholder{
     color:#fff;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: lighter;
     padding-left:7px;
+    font-family: 'Montserrat', sans-serif;
+
+    color: rgba(255, 255, 255, 0.832);
 }
 .wrapper .subscribe form .btn{
     background: #FF8500;
@@ -202,12 +200,17 @@ footer .socialIcons ul li img::selection{
 /* arabic */
 .wrapper_AR{
     font-family: 'Tajawal', sans-serif;
-}
-.wrapper_AR {
     text-align: right;
 }
 .wrapper_AR section .title{
     padding-top: 60px;
+}
+.wrapper_AR section p{
+    padding-top: 13px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150.9%;
+    /* margin-left: 20px; */
 }
 .wrapper_AR .subscribe form{
     display:flex;
@@ -216,13 +219,13 @@ footer .socialIcons ul li img::selection{
     padding-left: 10px;
 }
 .wrapper_AR .subscribe .form_title{
+    /* padding-left: 20px; */
     font-size: 1.25rem;
     font-weight: 400;
-    /* line-height: 150.9%; */
     padding-bottom:10px;
 }
 .wrapper_AR .subscribe form .input{
-    width: 390px;
+    width: 396px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
     border-radius:7px;
@@ -233,7 +236,7 @@ footer .socialIcons ul li img::selection{
 }
 .wrapper_AR .subscribe form .input::placeholder{
     color:#fff;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: lighter;
     padding-right:7px;
     text-align: right;
