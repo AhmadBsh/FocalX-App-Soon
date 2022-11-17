@@ -19,6 +19,7 @@ body{
     position: absolute;
     z-index: 0;
     display: inline-block;
+    background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);;
 }
 #demo-canvas {
     z-index: 2;
