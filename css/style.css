@@ -243,6 +243,8 @@ footer .socialIcons ul li img::selection{
     font-family: 'Tajawal', sans-serif;
 }
 .wrapper_AR .subscribe form .btn{
+    font-family: 'Tajawal', sans-serif;
+
     background: #FF8500;
     font-size: 1.25rem;
     border-radius: 7px;
