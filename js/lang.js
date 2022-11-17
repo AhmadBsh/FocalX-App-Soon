@@ -98,6 +98,8 @@ EN_btn.addEventListener('click',()=>{
     EN_btn.classList.remove('de-active')
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
+    footer.classList.remove('AR_footer')
+
 })
 AR_btn.addEventListener('click',()=>{
     wrapper.innerHTML=htmlAR
@@ -106,4 +108,5 @@ AR_btn.addEventListener('click',()=>{
     AR_btn.classList.remove('de-active')
     EN_btn.classList.remove('active')
     EN_btn.classList.add('de-active')
+    footer.classList.add('AR_footer')
 })
