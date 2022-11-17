@@ -244,7 +244,6 @@ footer .socialIcons ul li img::selection{
 }
 .wrapper_AR .subscribe form .btn{
     font-family: 'Tajawal', sans-serif;
-
     background: #FF8500;
     font-size: 1.25rem;
     border-radius: 7px;
@@ -252,7 +251,7 @@ footer .socialIcons ul li img::selection{
     border:none;
     width:130px;
     height:40px;
-    padding:8px ;
+    padding:5px ;
     margin-right: -7px;
     font-weight: 700;
     z-index: 2;
