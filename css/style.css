@@ -171,9 +171,8 @@ footer{
     display:flex;
     justify-content:flex-start;
     align-items:center;
-    column-gap: 60px;
+    column-gap: 85px;
     margin-left: 34px;
-
 }
 footer p{
     font-weight: 300;
@@ -254,4 +253,8 @@ footer .socialIcons ul li img::selection{
     text-align:center;
     font-weight: 700;
 
+}
+.AR_footer{
+    padding-left: 10px;
+    gap: 105px;
 }
