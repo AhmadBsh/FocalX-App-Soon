@@ -1,12 +1,12 @@
 
-let m =  new Date("Dec 24, 2022 09:57:00")
+let m =  new Date("Mar 8, 2023 09:57:00")
 let now = new Date()
 let months = (m.getFullYear() - now.getFullYear()) * 12;
 months -= now.getMonth();
 months += m.getMonth();
 months= months <= 0 ? 0 : months;
 
-let countDownDate = new Date("Dec 24, 2022 09:57:00").getTime();
+let countDownDate = new Date("Mar 8, 2023 09:57:00").getTime();
 
 let counter = setInterval(() => {
   // Get Date Now
@@ -15,6 +15,7 @@ let counter = setInterval(() => {
   let dateDiff = countDownDate - nowDate;
 
   let days = Math.floor((dateDiff % (1000 * 60 * 60 * 24*30)) / (1000 * 60 * 60*24));
+  days=days<=0?0:days;
   let hours = Math.floor((dateDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   hours=hours<=0?0:hours;
   let minutes = Math.floor((dateDiff % (1000 * 60 * 60)) / (1000 * 60));

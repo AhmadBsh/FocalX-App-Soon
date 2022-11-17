@@ -2,6 +2,8 @@ let wrapper = document.querySelector('#wrapper')
 let EN_btn = document.querySelector('#EN')
 let AR_btn = document.querySelector('#AR')
 let footer = document.querySelector('#footer')
+let counterr = document.querySelector('#counter')
+let container = document.querySelector('#container')
 let htmlEN = `
 <section>
  <h1 class="title">New Era will Begin</h1>
@@ -22,28 +24,7 @@ let htmlEN = `
        <!-- </p> -->
      </form>
  </div>
- <div class="counter" id='counter'>
-     <div class="months block">
-         <p id='month'></p>
-         <p>Months</p>
-     </div>
-     <div class="days block">
-         <p id='day'></p>
-         <p>Days</p>
-     </div>
-     <div class="hours block">
-         <p id='hour'></p>
-         <p>Hours</p>
-     </div>
-     <div class="minutes block">
-         <p id='minute'></p>
-         <p>Minutes</p>
-     </div>
-     <div class="seconds block">
-         <p id='second'></p>
-         <p>Seconds</p>
-     </div>
- </div>`
+ `
 let htmlAR = `
 <section>
  <h1 class="title">عصر جديد سيبدأ معنا</h1>
@@ -68,28 +49,7 @@ let htmlAR = `
          <input class="input" type="email" name="Email" placeholder="سجل من خلال بريدك الالكتروني">
      </form>
  </div>
- <div class="counter" id='counter'>
-     <div class="months block">
-         <p id='month'></p>
-         <p>Months</p>
-     </div>
-     <div class="days block">
-         <p id='day'></p>
-         <p>Days</p>
-     </div>
-     <div class="hours block">
-         <p id='hour'></p>
-         <p>Hours</p>
-     </div>
-     <div class="minutes block">
-         <p id='minute'></p>
-         <p>Minutes</p>
-     </div>
-     <div class="seconds block">
-         <p id='second'></p>
-         <p>Seconds</p>
-     </div>
- </div>`
+`
 EN_btn.addEventListener('click',()=>{
     wrapper.innerHTML=htmlEN
     wrapper.classList.remove('wrapper_AR')
@@ -99,7 +59,8 @@ EN_btn.addEventListener('click',()=>{
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
     footer.classList.remove('AR_footer')
-
+    counterr.style.columnGap='33px';
+    container.style.marginLeft= '34px';
 })
 AR_btn.addEventListener('click',()=>{
     wrapper.innerHTML=htmlAR
@@ -109,4 +70,6 @@ AR_btn.addEventListener('click',()=>{
     EN_btn.classList.remove('active')
     EN_btn.classList.add('de-active')
     footer.classList.add('AR_footer')
+    counterr.style.columnGap='37px';
+    container.style.marginLeft= '42px';
 })
