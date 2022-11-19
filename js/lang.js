@@ -28,17 +28,17 @@ let htmlEN = `
 let htmlAR = `
 <section>
  <h1 class="title">عصر جديد سيبدأ معنا</h1>
- <p class="p1">
+ <p class="p1" dir="rtl">
  منصة
- بوابة واسعة للأعمال في سورية
  <strong>focal app solution</strong> 
+ بوابة واسعة للأعمال في سورية
  <br>
 مكان آمن لك إن كنت: صاحب عمل أو شركة، مُستقل،
 <br>
 باحث عن وظيفة، مصمم، مسّوق، مبرمج، أو  مُدون.
 <br>
  </p>
- <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <span>هنا</span></p>
+ <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
 
 </section>
  <div id="subscribe" class="subscribe">
@@ -46,21 +46,19 @@ let htmlAR = `
      </p>
      <form method="POST" action="#">
          <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
-         <input class="input" type="email" name="Email" placeholder="سجل من خلال بريدك الالكتروني">
+         <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">
      </form>
  </div>
 `
 EN_btn.addEventListener('click',()=>{
     wrapper.innerHTML=htmlEN
     wrapper.classList.remove('wrapper_AR')
-
     EN_btn.classList.add('active')
     EN_btn.classList.remove('de-active')
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
     footer.classList.remove('AR_footer')
     counterr.style.columnGap='33px';
-    container.style.marginLeft= '34px';
 })
 AR_btn.addEventListener('click',()=>{
     wrapper.innerHTML=htmlAR
@@ -71,5 +69,4 @@ AR_btn.addEventListener('click',()=>{
     EN_btn.classList.add('de-active')
     footer.classList.add('AR_footer')
     counterr.style.columnGap='37px';
-    container.style.marginLeft= '42px';
 })
