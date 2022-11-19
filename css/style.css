@@ -69,6 +69,7 @@ p::selection {
 }
 .lang button{
     border: none;
+    cursor: pointer;
     background-color: transparent;
     font-weight:400 ;
     font-size: 1.297rem;
@@ -140,6 +141,7 @@ p::selection {
     color: rgba(255, 255, 255, 0.832);
 }
 .wrapper .subscribe form .btn{
+    cursor: pointer;
     background: #FF8500;
     font-size: 1.25rem;
     border-radius: 7px;
