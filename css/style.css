@@ -34,6 +34,7 @@ p::selection {
 }
 
 .container{
+    height: 100vh;
     margin-left: 34px;
     font-family: 'Montserrat', sans-serif;
     position: relative;
@@ -165,6 +166,8 @@ p::selection {
     text-align:center;
 }
 footer{
+    position: absolute;
+    bottom: 30px;
     padding-top: 39px;
     display:flex;
     justify-content:flex-start;
