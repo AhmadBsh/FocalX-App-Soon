@@ -15,39 +15,18 @@ let htmlEN = `
     a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
     job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
 <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
-
 </section>
 <div id="subscribe" class="subscribe">
     <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
     </p>
-    <form method="POST" action="" name="submit-to-google-sheet">
+    <form method="POST" action="#">
       <!-- <p class="subscribe-input"> -->
-        <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe" required>
-        <input class="btn" type="submit" value="Subscribe" name="Submit">
+        <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
+        <input class="btn" type="submit" value="Subscribe
+        " name="Submit">
       <!-- </p> -->
     </form>
-    <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
-
 </div>
-<script>
-const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
-const form = document.forms['submit-to-google-sheet']
-const msg = document.getElementById("msg")
-
-form.addEventListener('submit', e => {
-  e.preventDefault()
-  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-    .then(response => {
-      msg.innerHTML = "Thank you for Subscribing!"
-      setTimeout(function(){
-        msg.innerHTML = ""
-      },5000)
-      form.reset()
-
-    })
-    .catch(error => console.error('Error!', error.message))
-})
-</script>
  `
 let htmlAR = `
 <section>
@@ -61,14 +40,12 @@ let htmlAR = `
   الجمهورية العربية السورية </span>
   <br class="MB"> 
   <span class="not_MB">سورية</span>
- <br>
 مكان آمن لك إن كنت: صاحب عمل أو شركة، مُستقل،
 <br>
 باحث عن وظيفة، مصمم، مسّوق، مبرمج، أو  مُدون.
 <br>
  </p>
  <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
-
 </section>
  <div id="subscribe" class="subscribe">
      <p dir="rtl"class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
@@ -78,31 +55,11 @@ let htmlAR = `
      و يوم انطلاقها.
      </span>
      </p>
-     <form method="POST" action="index.html" name="submit-to-google-sheet">
+     <form method="POST" action="#">
          <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
          <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">
      </form>
-     <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
  </div>
- <script>
- const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
- const form = document.forms['submit-to-google-sheet']
- const msg = document.getElementById("msg")
-
- form.addEventListener('submit', e => {
-   e.preventDefault()
-   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-     .then(response => {
-       msg.innerHTML = "Thank you for Subscribing!"
-       setTimeout(function(){
-         msg.innerHTML = ""
-       },5000)
-       form.reset()
-
-     })
-     .catch(error => console.error('Error!', error.message))
- })
-</script>
 `
 EN_btn.addEventListener('click',(e)=>{
     wrapper.innerHTML=htmlEN
@@ -141,7 +98,7 @@ AR_btn.addEventListener('click',(e)=>{
         counterr.style.columnGap='21px';
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
-        counterr.style.marginTop='60px';
+        counterr.style.marginTop='22px';
         contact.innerHTML='<p class="contact_AR" dir="rtl">ابقوا على إطلاع من خلال متابعتنا:</p>'
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'
