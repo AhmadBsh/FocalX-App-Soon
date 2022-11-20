@@ -105,4 +105,4 @@ AR_btn.addEventListener('click',(e)=>{
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'
     }
-})
+}) 
