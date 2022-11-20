@@ -22,9 +22,6 @@ body{
    margin: 0;
 }
 
-
-
-
 .large-header {
     height: 100vh;
     width: 100vw;
@@ -116,25 +113,27 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
 }
-.wrapper .subscribe{
+.subscribe{
     padding-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content:center;
 }
-.wrapper .subscribe .form_title{
+.subscribe .form_title{
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 150.9%;
     padding-bottom:10px;
 }
-.wrapper .subscribe form{
+form{
     display:flex;
     justify-content:center;
     align-items:center;
 }
-.wrapper .subscribe form .input{
+form .input{
+    border: none;
+    outline: none;
     width: 377px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -145,7 +144,7 @@ p::selection {
     font-weight: 400;
     padding-left: 7px;
 }
-.wrapper .subscribe form .input::placeholder{
+form .input::placeholder{
     color:#fff;
     font-size: 0.9rem;
     font-weight: lighter;
@@ -153,7 +152,7 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.832);
 }
-.wrapper .subscribe form .btn{
+form .btn{
     cursor: pointer;
     background: #FF8500;
     font-size: 1.25rem;
@@ -204,7 +203,6 @@ footer .socialIcons ul{
     list-style-type: none;
     column-gap:6px;
     margin-left: 8px;
-
 }
 footer .socialIcons ul li img{
     width:22px;
@@ -222,30 +220,41 @@ footer .socialIcons ul li img::selection{
     width: 515px;
     margin-left: 12px;
 }
+
+.sb_AR{
+    font-family: 'Tajawal', sans-serif;
+    text-align: right;
+    width: 515px;
+    margin-left: 12px;
+}
+
 .wrapper_AR section .title{
     padding-top: 60px;
 }
-.wrapper_AR section .form_title{
+.sb_AR section .form_title{
     padding-top: 13px;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 150.9%;
     /* margin-left: 20px; */
 }
-.wrapper_AR .subscribe form{
+.sb_AR form{
     display:flex;
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
-    /* padding-top: 16px; */
+    padding-top: 16px;
 }
-.wrapper_AR .subscribe .form_title{
+.sb_AR .form_title{
     /* padding-left: 20px; */
     font-size: 1.25rem;
     font-weight: 400;
     padding-bottom:10px;
 }
-.wrapper_AR .subscribe form .input{
+.sb_AR form .input{
+    text-align: center;
+    border: none;
+    outline: none;
     width: 388px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -255,7 +264,7 @@ footer .socialIcons ul li img::selection{
     font-size: 0.8rem;
     font-weight: 400;
 }
-.wrapper_AR .subscribe form .input::placeholder{
+.sb_AR form .input::placeholder{
     color: rgba(255, 255, 255, 0.64);
     font-weight: 400;
     font-size: 20px;
@@ -264,7 +273,7 @@ footer .socialIcons ul li img::selection{
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
-.wrapper_AR .subscribe form .btn{
+.sb_AR form .btn{
     cursor: pointer;
     font-family: 'Tajawal', sans-serif;
     background: #FF8500;
@@ -292,10 +301,9 @@ footer .socialIcons ul li img::selection{
         display: inline;
     }
 
-    html {
-    }
     body{
         background-image: url('../img/mainbackgroundM.png' )  ;
+        /* background-position: top center; */
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -322,23 +330,30 @@ footer .socialIcons ul li img::selection{
      .wrapper section .title{
         font-size: 1.563rem;
      }
-     .wrapper .subscribe form .input{
+     form .input{
+        border: none;
+        outline: none;
         width: 253px;
         height:27px;
         border-radius:5px;
      }
-     .wrapper .subscribe form .input::placeholder{
+
+     .sb_AR form .input{
+        border: none;
+        outline: none;
+        width: 262px;
+        height:27px;
+        border-radius:5px;
+     }
+     form .input::placeholder{
         font-size: 0.6rem;
      }
-     .wrapper .subscribe form .btn{
+     form .btn{
         width:87px;
         height:27px;
         font-size: 0.9rem;
-         padding: 6px;
      }
-     .wrapper_AR .subscribe form .btn {
-        padding: 3px;
-     }
+
      .counter_MB{
         column-gap:17px;
         font-size: 1.25rem;
@@ -379,6 +394,13 @@ footer .socialIcons ul li img::selection{
     }
     /* ? mobile arabic ? */
 
+    .sb_AR{
+        font-family: 'Tajawal', sans-serif;
+        text-align: right;
+        width: max-content;
+        margin-left: 4px;
+    }
+
     .wrapper_AR{
         font-family: 'Tajawal', sans-serif;
         text-align: right;
@@ -399,7 +421,12 @@ footer .socialIcons ul li img::selection{
     .wrapper_AR section p{
         font-size: 1rem;
     }
-    .wrapper_AR .subscribe{
+
+    .sb_AR form .input::placeholder{
+        font-size: 0.9rem;
+    }
+
+    .sb_AR .subscribe{
         margin: 0;
         margin-top: 24px;
         padding-top: 0;
@@ -407,7 +434,7 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-end;
         align-items: flex-end;
     }
-    .wrapper_AR .subscribe .form_title{
+    .sb_AR .subscribe .form_title{
         font-size: 1rem;
         font-weight: 400;
         padding-bottom:23px;
@@ -450,6 +477,15 @@ footer .socialIcons ul li img::selection{
     .lang{
         padding-left: 39px;
     }
+    .sb_AR form .btn{
+        width:87px;
+        font-size: 13.45px;
+        height:27px;
+    }
+
+    .sb_AR form{
+        padding-top: 0;
+    }
 }
 
 @media screen and (min-height:700px) and (min-width:600px){
@@ -460,11 +496,4 @@ footer .socialIcons ul li img::selection{
     
 }
 
-
-.t{
-    width: 375px;
-    height: 812px;
-    background-color: #FF8500;
-
-}
 
