@@ -200,6 +200,8 @@ footer .socialIcons ul{
     align-items:center;
     list-style-type: none;
     column-gap:6px;
+    margin-left: 8px;
+
 }
 footer .socialIcons ul li img{
     width:22px;
@@ -232,7 +234,7 @@ footer .socialIcons ul li img::selection{
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
-    padding-top: 16px;
+    /* padding-top: 16px; */
 }
 .wrapper_AR .subscribe .form_title{
     /* padding-left: 20px; */
@@ -327,16 +329,26 @@ footer .socialIcons ul li img::selection{
         width:87px;
         height:27px;
         font-size: 0.9rem;
+         padding: 6px;
+     }
+     .wrapper_AR .subscribe form .btn {
+        padding: 3px;
      }
      .counter_MB{
         column-gap:17px;
         font-size: 1.25rem;
+            padding-top: 45px;
+
      }
      .not_MB{
         display: none;
     }
+    .AR_footer .socialIcons ul li img { 
+        width: 30px;
+        height: 30px;
+    }
     footer{
-        padding-top: 35px;
+        padding-top: 40px;
         display:flex;
         justify-content:flex-start;
         flex-direction: column-reverse;
@@ -353,11 +365,11 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0;
-        column-gap: 40px;
+        row-gap: 40px;
     }
     footer .footer_p{
         text-align: center;
-        padding-top: 50px;
+        padding-top: 45px;
         font-size: 0.9rem;
     }
     /* ? mobile arabic ? */
@@ -372,6 +384,11 @@ footer .socialIcons ul li img::selection{
     .wrapper_AR .p2{
         margin-top: 40px;
         padding-top: 0px;
+        font-size: 1.1rem;
+    }
+    .wrapper_AR .p1 {
+        font-weight: 400;
+
     }
 
     .wrapper_AR section p{
