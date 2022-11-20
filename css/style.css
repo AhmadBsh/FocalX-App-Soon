@@ -5,21 +5,32 @@
     box-sizing: border-box;
     overflow: hidden;
 }
+.MB{
+    display: none;
+}
+.not_MB{
+    display: inline;
+}
 body{
    width: 100vw; 
    height: 100vh;
-   background-image: url('../img/Untitled.png');
+   background-image: url('../img/Untitled.jpg');
    background-position: top center;
    background-size: cover;
    background-repeat: no-repeat;
    color: #fff;
    margin: 0;
 }
+
+
 .large-header {
     position: absolute;
     z-index: 0;
     display: inline-block;
-    background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);;
+    /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
+}
+a{
+    text-decoration: none;
 }
 #demo-canvas {
     z-index: 2;
@@ -34,30 +45,29 @@ p::selection {
 }
 
 .container{
+    width: 100%;
+    height: 100%;
     margin-left: 34px;
     font-family: 'Montserrat', sans-serif;
     position: relative;
     z-index: 99;
-    /* width: 590px; */
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    /* padding-left: 34px; */
     padding-top: 30px;
 }
 .container header{
     display: flex;
     justify-content: center;
     align-items: center;
-    column-gap: 367px;
+    column-gap: 318px;
 }
 .lang{
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 34px;
-    
 }
 .lang span{   
      width: 2px;
@@ -69,9 +79,9 @@ p::selection {
 .lang button{
     border: none;
     background-color: transparent;
-    
     font-weight:400 ;
     font-size: 1.297rem;
+    cursor: pointer;
 }
 .lang .active{
     color: #fff;
@@ -84,10 +94,10 @@ p::selection {
     height: 24px;
 }
 .wrapper section .title{
+    font-weight: 700;
     color:rgba(255, 133, 0, 1);
     font-size: 2.5rem;
     padding-top: 64px;
-
 }
 .wrapper section p{
     padding-top: 19px;
@@ -101,9 +111,6 @@ p::selection {
 .wrapper section .p2 span{
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
-}
-.wrapper section .p2 a{
-    text-decoration: none;
 }
 .wrapper .subscribe{
     padding-top: 32px;
@@ -136,9 +143,11 @@ p::selection {
 }
 .wrapper .subscribe form .input::placeholder{
     color:#fff;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     font-weight: lighter;
     padding-left:7px;
+    font-family: 'Montserrat', sans-serif;
+    color: rgba(255, 255, 255, 0.832);
 }
 .wrapper .subscribe form .btn{
     background: #FF8500;
@@ -171,14 +180,14 @@ footer{
     align-items:center;
     column-gap: 47px;
 }
-footer p{
-    font-family: Montserrat;
+footer .footer_p{
+    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 0.875rem;
     color: rgba(255, 255, 255, 1);
 }
 footer a {
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     color: #FF8500;
     font-weight: bold;
@@ -202,27 +211,35 @@ footer .socialIcons ul li img::selection{
 /* arabic */
 .wrapper_AR{
     font-family: 'Tajawal', sans-serif;
-}
-.wrapper_AR {
     text-align: right;
+    width: 515px;
+    margin-left: 12px;
 }
 .wrapper_AR section .title{
     padding-top: 60px;
+}
+.wrapper_AR section .form_title{
+    padding-top: 13px;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 150.9%;
+    /* margin-left: 20px; */
 }
 .wrapper_AR .subscribe form{
     display:flex;
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
+    padding-top: 16px;
 }
 .wrapper_AR .subscribe .form_title{
+    /* padding-left: 20px; */
     font-size: 1.25rem;
     font-weight: 400;
-    /* line-height: 150.9%; */
     padding-bottom:10px;
 }
 .wrapper_AR .subscribe form .input{
-    width: 390px;
+    width: 388px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
     border-radius:7px;
@@ -232,14 +249,16 @@ footer .socialIcons ul li img::selection{
     font-weight: 400;
 }
 .wrapper_AR .subscribe form .input::placeholder{
-    color:#fff;
-    font-size: 0.7rem;
-    font-weight: lighter;
-    padding-right:7px;
+    color: rgba(255, 255, 255, 0.64);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150.9%;
+    padding-right:21px;
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
 .wrapper_AR .subscribe form .btn{
+    font-family: 'Tajawal', sans-serif;
     background: #FF8500;
     font-size: 1.25rem;
     border-radius: 7px;
@@ -247,11 +266,164 @@ footer .socialIcons ul li img::selection{
     border:none;
     width:130px;
     height:40px;
-    padding:8px ;
+    padding:5px ;
     margin-right: -7px;
     font-weight: 700;
     z-index: 2;
 }
 .AR_footer{
     column-gap: 65px;
+}
+
+/*!!MOBILE!! */
+@media screen and (max-width:400px){
+    *{
+        overflow: visible;
+    }
+    .MB{
+        display: inline;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100vw; 
+        height: 100%;
+        color: #fff;
+    }
+    .container{
+        background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+     }
+     .container header{
+        column-gap: 135px;
+     }
+     .wrapper section .title{
+        font-size: 1.563rem;
+     }
+     .wrapper .subscribe form .input{
+        width: 253px;
+        height:27px;
+        border-radius:5px;
+     }
+     .wrapper .subscribe form .input::placeholder{
+        font-size: 0.6rem;
+     }
+     .wrapper .subscribe form .btn{
+        width:87px;
+        height:27px;
+        font-size: 0.9rem;
+     }
+     .counter_MB{
+        column-gap:17px;
+        font-size: 1.25rem;
+     }
+     .not_MB{
+        display: none;
+    }
+    footer{
+        padding-top: 35px;
+        display:flex;
+        justify-content:flex-start;
+        flex-direction: column-reverse;
+        align-items:flex-start;
+        column-gap: 47px;
+    }
+    footer .socialIcons p{
+        font-size: 1.28rem;
+        font-weight: 600px;
+        text-align: left;
+    }
+    footer .socialIcons{
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        column-gap: 40px;
+    }
+    footer .footer_p{
+        text-align: center;
+        padding-top: 50px;
+        font-size: 0.9rem;
+    }
+    /* ? mobile arabic ? */
+
+    .wrapper_AR{
+        font-family: 'Tajawal', sans-serif;
+        text-align: right;
+        width: max-content;
+        margin-left: 4px;
+    }
+
+    .wrapper_AR .p2{
+        margin-top: 40px;
+        padding-top: 0px;
+    }
+
+    .wrapper_AR section p{
+        font-size: 1rem;
+    }
+    .wrapper_AR .subscribe{
+        margin: 0;
+        margin-top: 24px;
+        padding-top: 0;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+    .wrapper_AR .subscribe .form_title{
+        font-size: 1rem;
+        font-weight: 400;
+        padding-bottom:23px;
+        line-height: 150.9%;
+        text-align: right;
+    }
+
+    .socialIcons_AR{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        margin: 0;
+    }
+    footer .socialIcons_AR ul{
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        text-align: right;
+        width: 187px;
+        margin-left: 145px;
+    }
+
+
+    .contact_AR{
+        padding-top: 10px;
+        text-align: right;
+        font-family: 'Tajawal', sans-serif;
+        font-weight: 700;
+        margin: 0;
+        padding-left: 38px;
+    }
+
+    .AR_footer .footer_p{
+        padding-left: 4px;
+    }
+
+    .lang{
+        padding-left: 39px;
+    }
+}
+
+
+.t{
+    width: 375px;
+    height: 812px;
+    background-color: #FF8500;
 }

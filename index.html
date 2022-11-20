@@ -15,12 +15,13 @@
     
 </head>
 <body>
+<!--     <div class="bg"></div> -->
   <div id="large-header" class="large-header">
     <canvas id="demo-canvas"></canvas> 
 </div>
     <div class="container" id="container">
-        <header>
-            <h1 class="logo"><a href="https://focal-x.com/" target="_blank"><img src="./img/logo.png" alt=""></a></h1>
+        <header id="header">
+            <h1 class="logo"><a href="https://focal-x.com/" target="_blank"><img src="./img/logo.svg" alt=""></a></h1>
             <div class="lang">
               <button class="EN active" id="EN" >EN</button><span></span><button id="AR" class="AR de-active">AR</button>
             </div>
@@ -28,14 +29,14 @@
         <div class="wrapper" id="wrapper">
            <section>
             <h1 class="title">New Era will Begin</h1>
-            <p class="p1"> <strong>focal app solution</strong> will be a vast business gate in Syria,<br>
-                a safe place for you if you are: Business owner, Freelancer,<br>
-                job seeker, designer, marketer, developer, or blogger.</p>
-            <p class="p2">Also you can check our company website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
+            <p class="p1"> <strong>focal app solution</strong> will be a vast <br class="MB"> business gate in Syria,<br>
+                a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
+                job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
+            <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
            
            </section>
             <div id="subscribe" class="subscribe">
-                <p class="form_title">Subscribe to the newsletter to stay in latest news
+                <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
                 </p>
                 <form method="POST" action="#">
                   <!-- <p class="subscribe-input"> -->
@@ -46,7 +47,7 @@
                 </form>
             </div>
           </div>
-          <div class="counter" id='counter'>
+          <div class="counter counter_MB" id='counter'>
               <div class="months block">
                   <p id='month'></p>
                   <p>Months</p>
@@ -63,16 +64,17 @@
                   <p id='minute'></p>
                   <p>Minutes</p>
               </div>
-              <div class="seconds block">
+              <div class="seconds block not_MB" id="counter_block">
                   <p id='second'></p>
                   <p>Seconds</p>
               </div>
           </div>
           <footer id="footer">
-              <p>© 2021 - 2022 <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> All Right Reserved
+              <p id="footer_p" class="footer_p">© 2021 - 2022 <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> All Right Reserved
               </p>
               <div id="socialIcons" class="socialIcons">
-                  <ul>
+                <p class="MB" id="contact">Keep In Touch:</p>
+                  <ul id="listIcons">
                       <li>
                         <a href="https://www.facebook.com/focal.x.agency" target="_blank" title="facebook" class="facebookIcon"><img src="./img/facebook.svg" alt=""></a>
                       </li>
@@ -92,15 +94,11 @@
                 </div>
           </footer>
     </div>
-
-
     <script src="./js/main.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
     <script src="js/rAF.js"></script>
     <script src="./js/lang.js"></script>
-    <!-- <script src="./js/animation.js"></script> -->
-
-
+    <script src="./js/animation.js"></script>
 </body>
 </html>
