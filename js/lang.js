@@ -81,7 +81,7 @@ AR_btn.addEventListener('click',(e)=>{
     و يوم انطلاقها.
     </span>
     </p>`;
-    form=document.querySelector("form").innerHTML=`<input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
+    document.querySelector("form").innerHTML=`<input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
     <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">`;
     footer.classList.add('AR_footer')
     if (!window.matchMedia('screen and (max-width: 376px)').matches) {
