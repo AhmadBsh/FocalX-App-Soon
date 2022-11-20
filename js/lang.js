@@ -20,14 +20,34 @@ let htmlEN = `
 <div id="subscribe" class="subscribe">
     <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
     </p>
-    <form method="POST" action="#">
+    <form method="POST" action="" name="submit-to-google-sheet">
       <!-- <p class="subscribe-input"> -->
-        <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-        <input class="btn" type="submit" value="Subscribe
-        " name="Submit">
+        <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe" required>
+        <input class="btn" type="submit" value="Subscribe" name="Submit">
       <!-- </p> -->
     </form>
+    <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
+
 </div>
+<script>
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+      msg.innerHTML = "Thank you for Subscribing!"
+      setTimeout(function(){
+        msg.innerHTML = ""
+      },5000)
+      form.reset()
+
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
  `
 let htmlAR = `
 <section>
@@ -58,11 +78,31 @@ let htmlAR = `
      و يوم انطلاقها.
      </span>
      </p>
-     <form method="POST" action="#">
+     <form method="POST" action="index.html" name="submit-to-google-sheet">
          <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
          <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">
      </form>
+     <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
  </div>
+ <script>
+ const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
+ const form = document.forms['submit-to-google-sheet']
+ const msg = document.getElementById("msg")
+
+ form.addEventListener('submit', e => {
+   e.preventDefault()
+   fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+     .then(response => {
+       msg.innerHTML = "Thank you for Subscribing!"
+       setTimeout(function(){
+         msg.innerHTML = ""
+       },5000)
+       form.reset()
+
+     })
+     .catch(error => console.error('Error!', error.message))
+ })
+</script>
 `
 EN_btn.addEventListener('click',(e)=>{
     wrapper.innerHTML=htmlEN
