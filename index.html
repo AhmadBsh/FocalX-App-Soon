@@ -14,7 +14,7 @@
     <title>Document</title>
     
 </head>
-<body >
+<body>
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
   </div>
@@ -32,18 +32,19 @@
                 a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
                 job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
             <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
-           
            </section>
+          </div>
+          <div class="sb" id="sb">
             <div id="subscribe" class="subscribe">
-                <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-                </p>
-                <form method="POST" action="#" name="submit-to-google-sheet">
-                    <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-                    <input class="btn" type="submit" value="Subscribe
-                    " name="Submit">
-                </form>
-                <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
-            </div>
+              <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+              </p>
+              <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
+          </div>
+          <form method="POST" action="#" name="submit-to-google-sheet">
+            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
+            <input class="btn" type="submit" value="Subscribe
+            " name="Submit">
+        </form>
           </div>
           <div class="counter counter_MB" id='counter'>
               <div class="months block">
@@ -111,9 +112,8 @@
             msg.innerHTML = "Thank you for Subscribing!"
             setTimeout(function(){
               msg.innerHTML = ""
-            },5000)
+            },3000)
             form.reset()
-
           })
           .catch(error => console.error('Error!', error.message))
       })
