@@ -16,18 +16,6 @@ let htmlEN = `
     job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
 <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
 </section>
-<div id="subscribe" class="subscribe">
-    <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-    </p>
-    <form method="POST" action="" name="submit-to-google-sheet">
-      <!-- <p class="subscribe-input"> -->
-        <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-        <input class="btn" type="submit" value="Subscribe
-        " name="Submit">
-      <!-- </p> -->
-    </form>
-    <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
-</div>
  `
 let htmlAR = `
 <section>
@@ -48,28 +36,20 @@ let htmlAR = `
  </p>
  <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
 </section>
- <div id="subscribe" class="subscribe">
-     <p dir="rtl"class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
-     <br class="MB">
-     عن أخبار منصتنا
-     <span dir="rtl" class="MB">
-     و يوم انطلاقها.
-     </span>
-     </p>
-     <form method="POST" action="#" name="submit-to-google-sheet">
-         <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
-         <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">
-     </form>
-     <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
- </div>
 `
 EN_btn.addEventListener('click',(e)=>{
-    wrapper.innerHTML=htmlEN
-    wrapper.classList.remove('wrapper_AR')
     EN_btn.classList.add('active')
     EN_btn.classList.remove('de-active')
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
+    wrapper.innerHTML=htmlEN;
+    document.getElementById("subscribe").innerHTML=`<p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+    </p>`;
+    document.querySelector("form").innerHTML=`<input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
+    <input class="btn" type="submit" value="Subscribe
+    " name="Submit">`;
+    wrapper.classList.remove('wrapper_AR')
+    sb.classList.remove('sb_AR')
     footer.classList.remove('AR_footer')
     if (!window.matchMedia('screen and (max-width: 376px)').matches) {
         counterr.style.columnGap='33px';
@@ -86,12 +66,23 @@ EN_btn.addEventListener('click',(e)=>{
 
 })
 AR_btn.addEventListener('click',(e)=>{
-    wrapper.innerHTML=htmlAR
-    wrapper.classList.add('wrapper_AR')
     AR_btn.classList.add('active')
     AR_btn.classList.remove('de-active')
     EN_btn.classList.remove('active')
     EN_btn.classList.add('de-active')
+    wrapper.innerHTML=htmlAR;
+    wrapper.classList.add('wrapper_AR');
+    sb=document.getElementById("sb");
+    sb.classList.add('sb_AR');
+    document.getElementById("subscribe").innerHTML=`<p dir="rtl"class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
+    <br class="MB">
+    عن أخبار منصتنا
+    <span dir="rtl" class="MB">
+    و يوم انطلاقها.
+    </span>
+    </p>`;
+    form=document.querySelector("form").innerHTML=`<input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
+    <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">`;
     footer.classList.add('AR_footer')
     if (!window.matchMedia('screen and (max-width: 376px)').matches) {
         counterr.style.columnGap='37px';
@@ -105,4 +96,22 @@ AR_btn.addEventListener('click',(e)=>{
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'
     }
-}) 
+})
+
+const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
+      const form = document.forms['submit-to-google-sheet']
+      const msg = document.getElementById("msg")
+
+      form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+          .then(response => {
+            msg.innerHTML = "Thank you for Subscribing!"
+            setTimeout(function(){
+              msg.innerHTML = ""
+            },3000)
+            form.reset()
+
+          })
+          .catch(error => console.error('Error!', error.message))
+      }) 
