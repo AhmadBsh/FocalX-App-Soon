@@ -451,6 +451,7 @@ footer .socialIcons ul li img::selection{
         padding-left: 39px;
     }
 }
+
 @media screen and (min-height:700px) and (min-width:600px){
     footer{
         position: absolute;
@@ -466,3 +467,4 @@ footer .socialIcons ul li img::selection{
     background-color: #FF8500;
 
 }
+
