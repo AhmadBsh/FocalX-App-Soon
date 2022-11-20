@@ -19,13 +19,14 @@ let htmlEN = `
 <div id="subscribe" class="subscribe">
     <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
     </p>
-    <form method="POST" action="#">
+    <form method="POST" action="" name="submit-to-google-sheet">
       <!-- <p class="subscribe-input"> -->
         <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
         <input class="btn" type="submit" value="Subscribe
         " name="Submit">
       <!-- </p> -->
     </form>
+    <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
 </div>
  `
 let htmlAR = `
@@ -55,10 +56,11 @@ let htmlAR = `
      و يوم انطلاقها.
      </span>
      </p>
-     <form method="POST" action="#">
+     <form method="POST" action="#" name="submit-to-google-sheet">
          <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
          <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">
      </form>
+     <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
  </div>
 `
 EN_btn.addEventListener('click',(e)=>{
