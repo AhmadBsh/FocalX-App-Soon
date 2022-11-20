@@ -51,11 +51,11 @@ EN_btn.addEventListener('click',(e)=>{
     wrapper.classList.remove('wrapper_AR')
     sb.classList.remove('sb_AR')
     footer.classList.remove('AR_footer')
-    if (!window.matchMedia('screen and (max-width: 376px)').matches) {
+    if (!window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='33px';
         
     }
-    if (window.matchMedia('screen and (max-width: 376px)').matches) {
+    if (window.matchMedia('screen and (max-width: 500px)').matches) {
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
         counterr.style.marginTop='15px';
@@ -84,10 +84,10 @@ AR_btn.addEventListener('click',(e)=>{
     document.querySelector("form").innerHTML=`<input lang="ar" class="btn" type="submit" value="اشترك الآن" name="Submit">
     <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">`;
     footer.classList.add('AR_footer')
-    if (!window.matchMedia('screen and (max-width: 376px)').matches) {
+    if (!window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='37px';
     }
-    if (window.matchMedia('screen and (max-width: 376px)').matches) {
+    if (window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='21px';
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
