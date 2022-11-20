@@ -300,8 +300,6 @@ footer .socialIcons ul li img::selection{
         display: inline;
     }
 
-    html {
-    }
     body{
         background-image: url('../img/mainbackgroundM.png' )  ;
         /* background-position: top center; */
@@ -428,7 +426,7 @@ footer .socialIcons ul li img::selection{
         font-size: 0.9rem;
     }
 
-    .wrapper_AR .subscribe{
+    .sb_AR .subscribe{
         margin: 0;
         margin-top: 24px;
         padding-top: 0;
