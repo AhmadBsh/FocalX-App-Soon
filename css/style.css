@@ -21,13 +21,6 @@ body{
    color: #fff;
    margin: 0;
 }
-/* .bg {
-    position: absolute;
-    width:100vw;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.6);
-
-} */
 
 .large-header {
     height: 100vh;
@@ -120,25 +113,25 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
 }
-.wrapper .subscribe{
+/* .wrapper  */.subscribe{
     padding-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content:center;
 }
-.wrapper .subscribe .form_title{
+/* .wrapper  */.subscribe .form_title{
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 150.9%;
     padding-bottom:10px;
 }
-.wrapper .subscribe form{
+/* .wrapper  *//* .subscribe */ form{
     display:flex;
     justify-content:center;
     align-items:center;
 }
-.wrapper .subscribe form .input{
+/* .wrapper  *//* .subscribe */ form .input{
     width: 377px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -149,7 +142,7 @@ p::selection {
     font-weight: 400;
     padding-left: 7px;
 }
-.wrapper .subscribe form .input::placeholder{
+/* .wrapper  *//* .subscribe */ form .input::placeholder{
     color:#fff;
     font-size: 0.9rem;
     font-weight: lighter;
@@ -157,7 +150,7 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.832);
 }
-.wrapper .subscribe form .btn{
+/* .wrapper  *//* .subscribe */ form .btn{
     cursor: pointer;
     background: #FF8500;
     font-size: 1.25rem;
@@ -207,8 +200,6 @@ footer .socialIcons ul{
     align-items:center;
     list-style-type: none;
     column-gap:6px;
-    margin-left: 8px;
-
 }
 footer .socialIcons ul li img{
     width:22px;
@@ -226,30 +217,37 @@ footer .socialIcons ul li img::selection{
     width: 515px;
     margin-left: 12px;
 }
+
+.sb_AR{
+    font-family: 'Tajawal', sans-serif;
+    text-align: right;
+    width: 515px;
+    margin-left: 12px;
+}
 .wrapper_AR section .title{
     padding-top: 60px;
 }
-.wrapper_AR section .form_title{
+.sb_AR section .form_title{
     padding-top: 13px;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 150.9%;
     /* margin-left: 20px; */
 }
-.wrapper_AR .subscribe form{
+.sb_AR /* .subscribe */ form{
     display:flex;
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
-    /* padding-top: 16px; */
+    padding-top: 16px;
 }
-.wrapper_AR .subscribe .form_title{
+.sb_AR /* .subscribe */ .form_title{
     /* padding-left: 20px; */
     font-size: 1.25rem;
     font-weight: 400;
     padding-bottom:10px;
 }
-.wrapper_AR .subscribe form .input{
+.sb_AR /* .subscribe */ form .input{
     width: 388px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -259,7 +257,7 @@ footer .socialIcons ul li img::selection{
     font-size: 0.8rem;
     font-weight: 400;
 }
-.wrapper_AR .subscribe form .input::placeholder{
+.sb_AR /* .subscribe */ form .input::placeholder{
     color: rgba(255, 255, 255, 0.64);
     font-weight: 400;
     font-size: 20px;
@@ -268,7 +266,7 @@ footer .socialIcons ul li img::selection{
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
-.wrapper_AR .subscribe form .btn{
+.sb_AR /* .subscribe */ form .btn{
     cursor: pointer;
     font-family: 'Tajawal', sans-serif;
     background: #FF8500;
@@ -288,7 +286,7 @@ footer .socialIcons ul li img::selection{
 }
 
 /*!!MOBILE!! */
-@media screen and (max-width:500px){
+@media screen and (max-width:400px){
     *{
         overflow: visible;
     }
@@ -298,17 +296,18 @@ footer .socialIcons ul li img::selection{
 
     body{
         background-image: url('../img/mainbackgroundM.png');
+        background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         width: 100vw; 
-        height: 100%;
+        height: 100vh;
         color: #fff;
-        /* overflow: hidden; */
     }
     .container{
+        background: rgba(0, 0, 0, 0.6);
         /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
         margin: 0;
         width: 100%;
@@ -323,38 +322,33 @@ footer .socialIcons ul li img::selection{
      .wrapper section .title{
         font-size: 1.563rem;
      }
-     .wrapper .subscribe form .input{
+     /* .wrapper  *//* .subscribe */ form .input{
         width: 253px;
         height:27px;
         border-radius:5px;
      }
-     .wrapper .subscribe form .input::placeholder{
+     .sb_AR /* .subscribe */ form .input{
+        width: 262px;
+        height:27px;
+        border-radius:5px;
+     }
+     /* .wrapper  *//* .subscribe */ form .input::placeholder{
         font-size: 0.6rem;
      }
-     .wrapper .subscribe form .btn{
+     /* .wrapper  *//* .subscribe */ form .btn{
         width:87px;
         height:27px;
         font-size: 0.9rem;
-         padding: 6px;
-     }
-     .wrapper_AR .subscribe form .btn {
-        padding: 3px;
      }
      .counter_MB{
         column-gap:17px;
         font-size: 1.25rem;
-            padding-top: 45px;
-
      }
      .not_MB{
         display: none;
     }
-    .AR_footer .socialIcons ul li img { 
-        width: 30px;
-        height: 30px;
-    }
     footer{
-        padding-top: 40px;
+        padding-top: 35px;
         display:flex;
         justify-content:flex-start;
         flex-direction: column-reverse;
@@ -371,11 +365,11 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0;
-        row-gap: 40px;
+        column-gap: 40px;
     }
     footer .footer_p{
         text-align: center;
-        padding-top: 45px;
+        padding-top: 50px;
         font-size: 0.9rem;
     }
     /* ? mobile arabic ? */
@@ -387,20 +381,25 @@ footer .socialIcons ul li img::selection{
         margin-left: 4px;
     }
 
+    .sb_AR{
+        font-family: 'Tajawal', sans-serif;
+        text-align: right;
+        width: max-content;
+        margin-left: 4px;
+    }
     .wrapper_AR .p2{
         margin-top: 40px;
         padding-top: 0px;
-        font-size: 1.1rem;
-    }
-    .wrapper_AR .p1 {
-        font-weight: 400;
-
     }
 
     .wrapper_AR section p{
         font-size: 1rem;
     }
-    .wrapper_AR .subscribe{
+
+        .sb_AR form .input::placeholder{
+            font-size: 0.9rem;
+        }
+    .sb_AR .subscribe{
         margin: 0;
         margin-top: 24px;
         padding-top: 0;
@@ -408,7 +407,7 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-end;
         align-items: flex-end;
     }
-    .wrapper_AR .subscribe .form_title{
+    .sb_AR .subscribe .form_title{
         font-size: 1rem;
         font-weight: 400;
         padding-bottom:23px;
@@ -451,21 +450,13 @@ footer .socialIcons ul li img::selection{
     .lang{
         padding-left: 39px;
     }
-}
-
-@media screen and (min-height:700px) and (min-width:600px){
-    footer{
-        position: absolute;
-        bottom: 30px;
+    .sb_AR form .btn{
+        width:87px;
+        font-size: 13.45px;
+        height:27px;
     }
-    
+
+    .sb_AR form{
+        padding-top: 0;
+    }
 }
-
-
-.t{
-    width: 375px;
-    height: 812px;
-    background-color: #FF8500;
-
-}
-

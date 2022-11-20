@@ -14,11 +14,11 @@
     <title>Document</title>
     
 </head>
-<body >
-  <!-- <div class="bg"> -->
+<body>
+<!--     <div class="bg"></div> -->
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
-  </div>
+</div>
     <div class="container" id="container">
         <header id="header">
             <h1 class="logo"><a href="https://focal-x.com/" target="_blank"><img src="./img/logo.svg" alt=""></a></h1>
@@ -35,16 +35,18 @@
             <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
            
            </section>
+          </div>
+          <div class="sb" id="sb">
             <div id="subscribe" class="subscribe">
-                <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-                </p>
-                <form method="POST" action="#" name="submit-to-google-sheet">
-                    <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-                    <input class="btn" type="submit" value="Subscribe
-                    " name="Submit">
-                </form>
-                <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
-            </div>
+              <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+              </p>
+              <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
+          </div>
+          <form method="POST" action="#" name="submit-to-google-sheet">
+            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
+            <input class="btn" type="submit" value="Subscribe
+            " name="Submit">
+        </form>
           </div>
           <div class="counter counter_MB" id='counter'>
               <div class="months block">
@@ -93,7 +95,6 @@
                 </div>
           </footer>
     </div>
-
     <script src="./js/main.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
@@ -112,14 +113,12 @@
             msg.innerHTML = "Thank you for Subscribing!"
             setTimeout(function(){
               msg.innerHTML = ""
-            },5000)
+            },3000)
             form.reset()
 
           })
           .catch(error => console.error('Error!', error.message))
       })
     </script>
-
-<!-- </div> -->
 </body>
-</html> 
+</html>
