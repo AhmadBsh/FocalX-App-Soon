@@ -58,7 +58,7 @@ EN_btn.addEventListener('click',(e)=>{
     if (window.matchMedia('screen and (max-width: 376px)').matches) {
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
-        counterr.style.marginTop='15px';
+        // counterr.style.marginTop='15px';
         contact.innerHTML='<p class="MB" id="contact">Keep In Touch:</p>'
         socialIcons.classList.remove('socialIcons_AR')
         footer_p.innerHTML='<p>© 2021 - 2022 <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> All Right Reserved</p>'
@@ -91,7 +91,7 @@ AR_btn.addEventListener('click',(e)=>{
         counterr.style.columnGap='21px';
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
-        counterr.style.marginTop='22px';
+        // counterr.style.marginTop='22px';
         contact.innerHTML='<p class="contact_AR" dir="rtl">ابقوا على إطلاع من خلال متابعتنا:</p>'
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'

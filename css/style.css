@@ -150,7 +150,8 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.832);
 }
-/* .wrapper  *//* .subscribe */ form .btn{
+
+ form .btn{
     cursor: pointer;
     background: #FF8500;
     font-size: 1.25rem;
@@ -200,6 +201,8 @@ footer .socialIcons ul{
     align-items:center;
     list-style-type: none;
     column-gap:6px;
+    margin-left: 8px;
+
 }
 footer .socialIcons ul li img{
     width:22px;
@@ -239,7 +242,7 @@ footer .socialIcons ul li img::selection{
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
-    padding-top: 16px;
+    /* padding-top: 16px; */
 }
 .sb_AR /* .subscribe */ .form_title{
     /* padding-left: 20px; */
@@ -266,7 +269,8 @@ footer .socialIcons ul li img::selection{
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
-.sb_AR /* .subscribe */ form .btn{
+
+form .btn{
     cursor: pointer;
     font-family: 'Tajawal', sans-serif;
     background: #FF8500;
@@ -286,7 +290,7 @@ footer .socialIcons ul li img::selection{
 }
 
 /*!!MOBILE!! */
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
     *{
         overflow: visible;
     }
@@ -296,7 +300,6 @@ footer .socialIcons ul li img::selection{
 
     body{
         background-image: url('../img/mainbackgroundM.png');
-        background-position: top center;
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -305,9 +308,9 @@ footer .socialIcons ul li img::selection{
         width: 100vw; 
         height: 100vh;
         color: #fff;
+        /* overflow: hidden; */
     }
     .container{
-        background: rgba(0, 0, 0, 0.6);
         /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
         margin: 0;
         width: 100%;
@@ -334,16 +337,26 @@ footer .socialIcons ul li img::selection{
         width:87px;
         height:27px;
         font-size: 0.9rem;
+         padding: 6px;
+     }
+     .wrapper_AR .subscribe form .btn {
+        padding: 3px;
      }
      .counter_MB{
         column-gap:17px;
         font-size: 1.25rem;
+            padding-top: 45px;
+
      }
      .not_MB{
         display: none;
     }
+    .AR_footer .socialIcons ul li img { 
+        width: 30px;
+        height: 30px;
+    }
     footer{
-        padding-top: 35px;
+        padding-top: 40px;
         display:flex;
         justify-content:flex-start;
         flex-direction: column-reverse;
@@ -360,11 +373,11 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-start;
         align-items: flex-start;
         margin: 0;
-        column-gap: 40px;
+        row-gap: 40px;
     }
     footer .footer_p{
         text-align: center;
-        padding-top: 50px;
+        padding-top: 45px;
         font-size: 0.9rem;
     }
     /* ? mobile arabic ? */
@@ -385,6 +398,11 @@ footer .socialIcons ul li img::selection{
     .wrapper_AR .p2{
         margin-top: 40px;
         padding-top: 0px;
+        font-size: 1.1rem;
+    }
+    .wrapper_AR .p1 {
+        font-weight: 400;
+
     }
 
     .wrapper_AR section p{
@@ -442,3 +460,20 @@ footer .socialIcons ul li img::selection{
         padding-left: 39px;
     }
 }
+
+@media screen and (min-height:700px) and (min-width:600px){
+    footer{
+        position: absolute;
+        bottom: 30px;
+    }
+    
+}
+
+
+.t{
+    width: 375px;
+    height: 812px;
+    background-color: #FF8500;
+
+}
+
