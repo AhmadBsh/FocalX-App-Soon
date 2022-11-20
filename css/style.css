@@ -14,7 +14,7 @@
 body{
    width: 100vw; 
    height: 100vh;
-   background-image: url('../img/Untitled.jpg');
+   background-image: url('../img/mainbackground.jpg');
    background-position: top center;
    background-size: cover;
    background-repeat: no-repeat;
@@ -22,12 +22,12 @@ body{
    margin: 0;
 }
 
-
 .large-header {
+    height: 100vh;
+    width: 100vw;
     position: absolute;
     z-index: 0;
     display: inline-block;
-    /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
 }
 a{
     text-decoration: none;
@@ -77,6 +77,7 @@ p::selection {
      margin: 0 8px;
 }
 .lang button{
+    cursor: pointer;
     border: none;
     background-color: transparent;
     font-weight:400 ;
@@ -112,25 +113,25 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
 }
-.wrapper .subscribe{
+/* .wrapper  */.subscribe{
     padding-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content:center;
 }
-.wrapper .subscribe .form_title{
+/* .wrapper  */.subscribe .form_title{
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 150.9%;
     padding-bottom:10px;
 }
-.wrapper .subscribe form{
+/* .wrapper  *//* .subscribe */ form{
     display:flex;
     justify-content:center;
     align-items:center;
 }
-.wrapper .subscribe form .input{
+/* .wrapper  *//* .subscribe */ form .input{
     width: 377px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -141,7 +142,7 @@ p::selection {
     font-weight: 400;
     padding-left: 7px;
 }
-.wrapper .subscribe form .input::placeholder{
+/* .wrapper  *//* .subscribe */ form .input::placeholder{
     color:#fff;
     font-size: 0.9rem;
     font-weight: lighter;
@@ -149,7 +150,8 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
     color: rgba(255, 255, 255, 0.832);
 }
-.wrapper .subscribe form .btn{
+/* .wrapper  *//* .subscribe */ form .btn{
+    cursor: pointer;
     background: #FF8500;
     font-size: 1.25rem;
     border-radius: 7px;
@@ -215,30 +217,37 @@ footer .socialIcons ul li img::selection{
     width: 515px;
     margin-left: 12px;
 }
+
+.sb_AR{
+    font-family: 'Tajawal', sans-serif;
+    text-align: right;
+    width: 515px;
+    margin-left: 12px;
+}
 .wrapper_AR section .title{
     padding-top: 60px;
 }
-.wrapper_AR section .form_title{
+.sb_AR section .form_title{
     padding-top: 13px;
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 150.9%;
     /* margin-left: 20px; */
 }
-.wrapper_AR .subscribe form{
+.sb_AR /* .subscribe */ form{
     display:flex;
     justify-content:center;
     align-items:flex-end;
     padding-left: 10px;
     padding-top: 16px;
 }
-.wrapper_AR .subscribe .form_title{
+.sb_AR /* .subscribe */ .form_title{
     /* padding-left: 20px; */
     font-size: 1.25rem;
     font-weight: 400;
     padding-bottom:10px;
 }
-.wrapper_AR .subscribe form .input{
+.sb_AR /* .subscribe */ form .input{
     width: 388px;
     height:40px;
     background: rgba(255, 255, 255, 0.24);
@@ -248,7 +257,7 @@ footer .socialIcons ul li img::selection{
     font-size: 0.8rem;
     font-weight: 400;
 }
-.wrapper_AR .subscribe form .input::placeholder{
+.sb_AR /* .subscribe */ form .input::placeholder{
     color: rgba(255, 255, 255, 0.64);
     font-weight: 400;
     font-size: 20px;
@@ -257,7 +266,8 @@ footer .socialIcons ul li img::selection{
     text-align: right;
     font-family: 'Tajawal', sans-serif;
 }
-.wrapper_AR .subscribe form .btn{
+.sb_AR /* .subscribe */ form .btn{
+    cursor: pointer;
     font-family: 'Tajawal', sans-serif;
     background: #FF8500;
     font-size: 1.25rem;
@@ -283,16 +293,22 @@ footer .socialIcons ul li img::selection{
     .MB{
         display: inline;
     }
+
     body{
+        background-image: url('../img/mainbackgroundM.png');
+        background-position: top center;
+        background-size: cover;
+        background-repeat: no-repeat;
         display: flex;
         justify-content: center;
         align-items: flex-start;
         width: 100vw; 
-        height: 100%;
+        height: 100vh;
         color: #fff;
     }
     .container{
-        background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);;
+        background: rgba(0, 0, 0, 0.6);
+        /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
         margin: 0;
         width: 100%;
         height: 100%;
@@ -306,15 +322,15 @@ footer .socialIcons ul li img::selection{
      .wrapper section .title{
         font-size: 1.563rem;
      }
-     .wrapper .subscribe form .input{
+     /* .wrapper  *//* .subscribe */ form .input{
         width: 253px;
         height:27px;
         border-radius:5px;
      }
-     .wrapper .subscribe form .input::placeholder{
+     /* .wrapper  *//* .subscribe */ form .input::placeholder{
         font-size: 0.6rem;
      }
-     .wrapper .subscribe form .btn{
+     /* .wrapper  *//* .subscribe */ form .btn{
         width:87px;
         height:27px;
         font-size: 0.9rem;
@@ -360,6 +376,12 @@ footer .socialIcons ul li img::selection{
         margin-left: 4px;
     }
 
+    .sb_AR{
+        font-family: 'Tajawal', sans-serif;
+        text-align: right;
+        width: max-content;
+        margin-left: 4px;
+    }
     .wrapper_AR .p2{
         margin-top: 40px;
         padding-top: 0px;
@@ -368,7 +390,7 @@ footer .socialIcons ul li img::selection{
     .wrapper_AR section p{
         font-size: 1rem;
     }
-    .wrapper_AR .subscribe{
+    .sb_AR .subscribe{
         margin: 0;
         margin-top: 24px;
         padding-top: 0;
@@ -376,7 +398,7 @@ footer .socialIcons ul li img::selection{
         justify-content: flex-end;
         align-items: flex-end;
     }
-    .wrapper_AR .subscribe .form_title{
+    .sb_AR .subscribe .form_title{
         font-size: 1rem;
         font-weight: 400;
         padding-bottom:23px;
