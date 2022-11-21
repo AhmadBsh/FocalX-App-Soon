@@ -229,7 +229,7 @@ footer .socialIcons ul li img::selection{
 }
 
 .wrapper_AR section .title{
-    padding-top: 60px;
+    padding-top: 50px;
 }
 .sb_AR section .form_title{
     padding-top: 13px;
@@ -302,7 +302,7 @@ footer .socialIcons ul li img::selection{
     }
 
     body{
-        background-image: url('../img/mainbackgroundM.png' )  ;
+        background-image: url('../img/mainbackgroundM2.png' )  ;
         /* background-position: top center; */
         background-size: cover;
         background-repeat: no-repeat;
