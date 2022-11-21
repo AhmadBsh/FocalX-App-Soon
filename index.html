@@ -15,6 +15,10 @@
     
 </head>
 <body>
+  <div class="bg_img">
+    <img id='bg_img'src="./img/mainbackground.jpg" alt="">
+  </div>
+  
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
   </div>
@@ -92,14 +96,16 @@
                 </div>
           </footer>
         </div>
-        <div id="popUp">
+        <div id="popUp" class="popUp">
           <img src="img/true.svg" alt="">
           <p class='popUp_text'>
             Thank you for trusting us. <br> You will be notified when we launch the website.
           </p>
-          <button class="close">Close</button>
-          <a href="">OR Countine to Our Website </a>
-        </div>
+          <div>
+            <button class="close" id="close">Close</button>
+          <a target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
+          </div>
+           </div>
 
     <script src="./js/main.js"></script>
     <script src="js/TweenLite.min.js"></script>
@@ -107,24 +113,7 @@
     <script src="js/rAF.js"></script>
     <script src="./js/lang.js"></script>
     <script src="./js/animation.js"></script>
-    <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwl_mGbMiAKZJFkikGrZVz_foWXTi3OJQjONR-kRLKCuBnZssbccmzHz3o2AF4ZViLq/exec'
-      const form = document.forms['submit-to-google-sheet']
-      const msg = document.getElementById("msg")
-
-      form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            msg.innerHTML = "Thank you for Subscribing!"
-            setTimeout(function(){
-              msg.innerHTML = ""
-            },3000)
-            form.reset()
-          })
-          .catch(error => console.error('Error!', error.message))
-      })
-    </script>
+   
 
 </body>
 </html> 
