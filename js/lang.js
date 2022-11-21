@@ -37,7 +37,7 @@ let htmlAR = `
  <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
 </section>
 `
-EN_btn.addEventListener('click',(e)=>{
+EN_btn.addEventListener('click',()=>{
     EN_btn.classList.add('active')
     EN_btn.classList.remove('de-active')
     AR_btn.classList.remove('active')
@@ -65,7 +65,7 @@ EN_btn.addEventListener('click',(e)=>{
     }
 
 })
-AR_btn.addEventListener('click',(e)=>{
+AR_btn.addEventListener('click',()=>{
     AR_btn.classList.add('active')
     AR_btn.classList.remove('de-active')
     EN_btn.classList.remove('active')
