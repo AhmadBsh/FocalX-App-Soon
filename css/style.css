@@ -376,7 +376,8 @@ footer .socialIcons ul li img::selection{
     }
      */
      .bg_img img {
-        /* content:url("img/mainbackgroundM2.png"); */
+       
+        object-fit: cover;
 
         
      }
