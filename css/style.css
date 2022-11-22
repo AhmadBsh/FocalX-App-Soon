@@ -17,19 +17,21 @@
     height: 100vh;
     z-index: -4;
   }
-.bg_img img {
+  .bg_img img {
     width: 100%;
     height: 100%;
   }
-.bg_img::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.3);
-  }
+/* body{
+   width: 100vw; 
+   height: 100vh;
+   background-image: url('../img/mainbackground.jpg');
+   background-position: top center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   color: #fff;
+   margin: 0;
+} */
+
 .large-header {
     height: 100vh;
     width: 100vw;
@@ -69,7 +71,7 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
 }
 .blur{
-    filter: blur(5px);
+    filter: blur(3px);
 }
 .popUp img{
     width: 69px;
@@ -173,7 +175,7 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
 }
-.wrapper .subscribe{
+.subscribe{
     padding-top: 32px;
     display: flex;
     flex-direction: column;
@@ -185,11 +187,10 @@ p::selection {
     font-weight: 500;
     line-height: 150.9%;
     padding-bottom:10px;
-    padding-top: 0px;
 }
 form{
     display:flex;
-    justify-content:left;
+    justify-content:center;
     align-items:center;
 }
 form .input{
@@ -286,6 +287,7 @@ footer .socialIcons ul li img::selection{
     font-family: 'Tajawal', sans-serif;
     text-align: right;
     width: 515px;
+    margin-left: 12px;
 }
 
 .wrapper_AR section .title{
@@ -361,8 +363,22 @@ footer .socialIcons ul li img::selection{
         display: inline;
     }
 
-     /* .bg_img img {
+    /* body{
+        background-image: url('../img/mainbackgroundM2.png' )  ;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100vw; 
+        height: 100%;
+        color: #fff;
+    }
+     */
+     .bg_img img {
         content:url("/img/mainbackgroundM2.png");
+
+        
      }
      .bg_img::after {
         content: "";
@@ -372,10 +388,10 @@ footer .socialIcons ul li img::selection{
         top: 0;
         left: 0;
         background-color: rgba(0, 0, 0, 0.6);
-      } */
+      }
 
      .popUp{
-         display: none;
+         display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -398,12 +414,12 @@ footer .socialIcons ul li img::selection{
         border-radius: 16px;
     }
     .blur{
-        filter: blur(3px);
+        filter: blur();
     }
     .popUp img{
         width: 48px;
         height: 48px;
-        content: url("../img/trueM.svg");
+        content: url("/img/trueM.svg");
     }
     .popUp p{
         text-align: center;
@@ -566,19 +582,10 @@ footer .socialIcons ul li img::selection{
     }
 
     .wrapper_AR .p2{
-        margin-top: 13px;
+        margin-top: 40px;
         padding-top: 0px;
         font-size: 1.1rem;
     }
-
-    .wrapper .p2{
-        padding-top: 27px;
-    }
-
-    .wrapper .subscribe{
-        padding-top: 27px;
-    }
-    
     .wrapper_AR .p1 {
         font-weight: 400;
 

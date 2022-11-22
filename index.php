@@ -15,6 +15,7 @@
     
 </head>
 <body id="body">
+<body id="body">
   <div class="bg_img">
     <img id='bg_img'src="./img/mainbackground.jpg" alt="">
   </div>
@@ -22,6 +23,7 @@
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
   </div>
+    <div class="container " id="container">
     <div class="container " id="container">
         <header id="header">
             <h1 class="logo"><a href="https://focal-x.com/" target="_blank"><img src="./img/logo.svg" alt=""></a></h1>
@@ -36,18 +38,18 @@
                 a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
                 job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
             <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
-            <div class="sb" id="sb">
-              <div id="subscribe" class="subscribe">
-                <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-                </p>
-            </div>
-            <form method="POST" action="">
-              <input class="input" type="email" name="email" placeholder="Enter your E-mail to subscribe">
-              <input class="btn" type="submit" value="Subscribe" name="subscribe_Submit" id="subscribe_Submit">
-          </form>
-          </div> 
-          </section>
-        </div>
+           </section>
+          </div>
+          <div class="sb" id="sb">
+            <div id="subscribe" class="subscribe">
+              <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+              </p>
+          </div>
+          <form method="POST" action="">
+            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe" >
+            <input id="subscribe_Submit" class="btn" type="submit" value="Subscribe" name="Submit">
+        </form>
+          </div>
           <div class="counter counter_MB" id='counter'>
               <div class="months block">
                   <p id='month'></p>
@@ -102,8 +104,9 @@
           </p>
           <div class="closing">
             <button  class="close" id="close">Close</button>
-          <a   class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
+          <a class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
           </div>
+        </div>
         </div>
 
     <script src="./js/main.js"></script>
@@ -113,28 +116,14 @@
     <script src="./js/lang.js"></script>
     <script src="./js/animation.js"></script>
     <script src="./js/popUp.js"></script>
-    <?php 
-    // session_start(); 
-    $x=0;
-    $conn = mysqli_connect("localhost", "root", "", "emails");
-    
-    $email=$_POST['email'];
-    $subscribe_Submit=$_POST['subscribe_Submit'];
-    
-    if(isset($subscribe_Submit)){
-    if(!empty($email)){
-        $insert=("INSERT INTO emails (id,emails) VALUES ('','$email')");
-        $result = mysqli_query($conn, $insert);
-        $x=1;
-    }   
-    }
-    ?>
-  <script>
-    if (<?php echo $x; ?>==1) {
-      onSubscribe();
-    }
-    
-  </script>
-  
+   <!-- <script >
+     const subscribe = ()=>{
+      console.log('lll')
+      bg_img.classList.add('blur');
+      container.classList.add('blur');
+      popUp.style.display = 'flex';
+  }
+   </script> -->
+
 </body>
 </html> 

@@ -1,4 +1,3 @@
-let bg_img = document.querySelector('#bg_img')
 let wrapper = document.querySelector('#wrapper')
 let EN_btn = document.querySelector('#EN')
 let AR_btn = document.querySelector('#AR')
@@ -9,54 +8,24 @@ let container = document.querySelector('#container')
 let counter_block = document.querySelector('#counter_block')
 let contact = document.querySelector('#contact')
 let socialIcons = document.querySelector('#socialIcons')
-let popUp = document.querySelector('#popUp')
+let popUp = document.querySelector('.popUp')
 let popUp_text = document.querySelector('.popUp_text')
 let closee = document.querySelector('.close')
 let closing = document.querySelector('.closing')
-let close_web = document.querySelector('.close_a')
-let subscribe_btn_M = document.querySelectorAll('.btn')
+let close_web = document.querySelector('.close_web')
+
 let htmlEN = `
 <section>
 <h1 class="title">New Era will Begin</h1>
-<p class="p1">
-    <strong>focal app solution</strong> 
-    will be a vast 
-    <br class="MB">
-     business gate in Syria,
-     <br>
-    a safe place for you if you are: 
-    <br class="MB">
-    Business owner, Freelancer,
-    <br>
-    job seeker, designer, marketer,
-    <br class="MB">
-    developer, or blogger.
-    </p>
-<p class="p2">Also you can check our company
-    <br class="MB">
-    website from 
-        <a href="https://focal-x.com/" 
-            target="_blank">
-            <span>HERE</span>
-        </a>
- </p>
-<div class="sb" id="sb">
-<div id="subscribe" class="subscribe">
-  <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-  </p>
-  <span id="msg" style="color:#FF8500 ; margin-top:10px ;display: block;"></span>
-</div>
-<form method="POST">
-    <input class="input" type="email" name="email" placeholder="Enter your E-mail to subscribe">
-    <input class="btn" type="submit" value="Subscribe" name="subscribe_Submit" id="subscribe_Submit">
-</form>
-</div>
+<p class="p1"> <strong>focal app solution</strong> will be a vast <br class="MB"> business gate in Syria,<br>
+    a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
+    job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
+<p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
 </section>
  `
 let htmlAR = `
 <section>
- <h1 class="title">
-   عصر جديد سيبدأ معنا</h1>
+ <h1 class="title">عصر جديد سيبدأ معنا</h1>
  <p class="p1" dir="rtl">
  منصة
  <strong>focal app solution</strong> 
@@ -72,22 +41,7 @@ let htmlAR = `
 <br>
  </p>
  <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
- <div class="sb" id="sb">
- <div id="subscribe" class="subscribe">
- <p dir="rtl"class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
- <br class="MB">
- عن أخبار منصتنا
- <span dir="rtl" class="MB">
- و يوم انطلاقها.
- </span>
- </p>
- </div>
- <form method="POST">
- <input lang="ar" class="btn" type="submit" value="اشترك الآن" name="subscribe_Submit" id="subscribe_Submit_ar">
- <input class="input" type="email" name="email" placeholder="سّجل من خلال بريدك الالكتروني">       
- </form>
- </div>
- </section>
+</section>
 `
 if (window.matchMedia('screen and (max-width: 400px)').matches) {
     bg_img.src='./img/mainbackgroundM2.png'
@@ -101,6 +55,10 @@ EN_btn.addEventListener('click',()=>{
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
     wrapper.innerHTML=htmlEN;
+    document.getElementById("subscribe").innerHTML=`<p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+    </p>`;
+    document.querySelector("form").innerHTML=`<input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
+    <input id='btn_subscribe' class="btn" type="submit" value="Subscribe" name="Submit">`;
     wrapper.classList.remove('wrapper_AR')
     sb.classList.remove('sb_AR')
     footer.classList.remove('AR_footer')
@@ -137,29 +95,9 @@ EN_btn.addEventListener('click',()=>{
         close_web.innerHTML='OR Countine to Our Website'
         popUp.classList.add('popUp')
         popUp.classList.remove('popUp_AR')
-        subscribe_btn_M.classList.add('btn_subscribeM')
-        subscribe_btn_M.classList.remove('btn_subscribe_ARM')
 
     }
-let close = document.querySelector('#close')
-let popUpMsg = document.querySelector('#popUp')
-let subscribe = document.querySelector('#btn_subscribe')
-let subscribeM = document.querySelector('.btn_subscribeM')
-let bg_img_div = document.querySelector('.bg_img')
-let containerr = document.querySelector('#container')
-    close.addEventListener('click',()=>{
-        popUpMsg.style.display = 'none'
-        bg_img_div.classList.remove('blur')
-        containerr.classList.remove('blur');
-    });
-    const onSubscribe = (e)=>{
-        e.preventDefault()
-        bg_img_div.classList.add('blur');
-        containerr.classList.add('blur');
-        popUpMsg.style.display = 'flex';
-    }
     subscribe.addEventListener('click', onSubscribe);
-    subscribeM.addEventListener('click', onSubscribe);
     
 })
 AR_btn.addEventListener('click',()=>{
@@ -171,6 +109,15 @@ AR_btn.addEventListener('click',()=>{
     wrapper.classList.add('wrapper_AR');
     sb=document.getElementById("sb");
     sb.classList.add('sb_AR');
+    document.getElementById("subscribe").innerHTML=`<p dir="rtl" class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
+    <br class="MB">
+    عن أخبار منصتنا
+    <span dir="rtl" class="MB">
+    و يوم انطلاقها.
+    </span>
+    </p>`;
+    document.querySelector("form").innerHTML=`<input id='btn_subscribe_AR' lang="ar" class="btn " type="submit" value="اشترك الآن" name="Submit">
+    <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">`;
     footer.classList.add('AR_footer')
     if (!window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='37px';
@@ -178,7 +125,7 @@ AR_btn.addEventListener('click',()=>{
         <p style="font-family:'Tajawal', sans-serif;" dir='rtl' class='popUp_text'>
         شكراً لثقتك بنا.
         <br>
-        سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.</p>
+        سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.        </p>
         <div>
         <a style="font-family:'Tajawal', sans-serif;" dir='rtl' target="_blank" href="https://focal-x.com/" >أو يمكنك المتابعة لموقعنا الرسمي</a>
           <button style="font-family:'Tajawal', sans-serif;" dir='rtl' class="close" id="close_ar">إغلاق</button>
@@ -205,31 +152,5 @@ AR_btn.addEventListener('click',()=>{
         close_web.classList.remove('close_web')
         close_web.innerHTML='أو يمكنك المتابعة لموقعنا الرسمي'
         popUp.classList.add('popUp_AR')
-        subscribe_btn_M.classList.add('btn_subscribe_ARM')
-        subscribe_btn_M.classList.remove('btn_subscribeM')
     }
-    
-let containerr = document.querySelector('#container')
-let subscribeAR = document.querySelector('#subscribe_Submit_ar')
-let subscribeARM = document.querySelector('.btn_subscribe_ARM')
-let closeAR = document.querySelector('#close_ar')
-closeAR.addEventListener('click',()=>{
-    popUpMsg.style.display = 'none'
-        bg_img_div.classList.remove('blur')
-        containerr.classList.remove('blur');
-})
-let close_AR = document.querySelector('.close_AR')
-close_AR.addEventListener('click',()=>{
-    popUpMsg.style.display = 'none'
-        bg_img_div.classList.remove('blur')
-        containerr.classList.remove('blur');
-})
-const onSubscribe = (e)=>{
-    e.preventDefault()
-    bg_img_div.classList.add('blur');
-    containerr.classList.add('blur');
-    popUpMsg.style.display = 'flex';
-}
-subscribeAR.addEventListener('click', onSubscribe);
-subscribeARM.addEventListener('click', onSubscribe);
 })

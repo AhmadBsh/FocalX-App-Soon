@@ -10,10 +10,11 @@ close.addEventListener('click',()=>{
 });
 
 const onSubscribe = (e)=>{
+    e.preventDefault()
     bg_img__c.classList.add('blur');
     containerr.classList.add('blur');
     popUpMsg.style.display = 'flex';
 }
-/* subscribe.addEventListener('click', onSubscribe); */
+subscribe.addEventListener('click', onSubscribe);
 
 
