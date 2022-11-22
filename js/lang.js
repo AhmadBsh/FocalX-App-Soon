@@ -97,12 +97,12 @@ EN_btn.addEventListener('click',()=>{
 let close = document.querySelector('#close')
 let popUpMsg = document.querySelector('#popUp')
 let subscribe = document.querySelector('#btn_subscribe')
-let bg_img_div = document.querySelector('.bg_img')
+// let bg_img_div = document.querySelector('.bg_img')
 let containerr = document.querySelector('#container')
     close.addEventListener('click',(e)=>{
         e.preventDefault()
         popUpMsg.style.display = 'none'
-        bg_img_div.classList.remove('blur')
+        bg_img.classList.remove('blur')
         containerr.classList.remove('blur');
     });
     
