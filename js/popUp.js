@@ -7,6 +7,8 @@ close.addEventListener('click',()=>{
     popUpMsg.style.display = 'none'
     bg_img__c.classList.remove('blur')
     containerr.classList.remove('blur');
+    container.style.pointerEvents= 'auto';
+
 });
 
 const onSubscribe = (e)=>{
@@ -14,6 +16,8 @@ const onSubscribe = (e)=>{
     bg_img__c.classList.add('blur');
     containerr.classList.add('blur');
     popUpMsg.style.display = 'flex';
+    container.style.pointerEvents= 'none';
+
 }
 subscribe.addEventListener('click', onSubscribe);
 

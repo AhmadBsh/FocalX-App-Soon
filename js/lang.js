@@ -104,6 +104,8 @@ let containerr = document.querySelector('#container')
         popUpMsg.style.display = 'none'
         bg_img.classList.remove('blur')
         containerr.classList.remove('blur');
+        container.style.pointerEvents = 'auto';
+
     });
     
     const onSubscribe = (e)=>{
@@ -111,6 +113,8 @@ let containerr = document.querySelector('#container')
         bg_img.classList.add('blur');
         containerr.classList.add('blur');
         popUpMsg.style.display = 'flex';
+        container.style.pointerEvents = 'none';
+
     }
     subscribe.addEventListener('click', onSubscribe);
     
@@ -175,12 +179,16 @@ closeAR.addEventListener('click',(e)=>{
     popUpMsg.style.display = 'none'
         bg_img.classList.remove('blur')
         containerr.classList.remove('blur');
+        container.style.pointerEvents = 'auto';
+
 })
 const onSubscribe = (e)=>{
     e.preventDefault()
     popUpMsg.style.display = 'flex';
     bg_img.classList.add('blur');
     containerr.classList.add('blur');
+    container.style.pointerEvents = 'none';
+
 }
 subscribeAR.addEventListener('click', onSubscribe);
 
