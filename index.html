@@ -14,7 +14,7 @@
     <title>Document</title>
     
 </head>
-<body>
+<body id="body">
   <div class="bg_img">
     <img id='bg_img'src="./img/mainbackground.jpg" alt="">
   </div>
@@ -22,7 +22,7 @@
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
   </div>
-    <div class="container" id="container">
+    <div class="container " id="container">
         <header id="header">
             <h1 class="logo"><a href="https://focal-x.com/" target="_blank"><img src="./img/logo.svg" alt=""></a></h1>
             <div class="lang">
@@ -43,10 +43,9 @@
               <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
               </p>
           </div>
-          <form method="POST" action="#" name="submit-to-google-sheet">
-            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-            <input class="btn" type="submit" value="Subscribe
-            " name="Submit">
+          <form method="POST" action="">
+            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe" >
+            <input id="subscribe_Submit" class="btn" type="submit" value="Subscribe" name="Submit">
         </form>
           </div>
           <div class="counter counter_MB" id='counter'>
@@ -101,11 +100,11 @@
           <p class='popUp_text'>
             Thank you for trusting us. <br> You will be notified when we launch the website.
           </p>
-          <div>
-            <button class="close" id="close">Close</button>
-          <a target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
+          <div class="closing">
+            <button  class="close" id="close">Close</button>
+          <a class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
           </div>
-           </div>
+        </div>
 
     <script src="./js/main.js"></script>
     <script src="js/TweenLite.min.js"></script>
@@ -113,7 +112,15 @@
     <script src="js/rAF.js"></script>
     <script src="./js/lang.js"></script>
     <script src="./js/animation.js"></script>
-   
+    <script src="./js/popUp.js"></script>
+   <!-- <script >
+     const subscribe = ()=>{
+      console.log('lll')
+      bg_img.classList.add('blur');
+      container.classList.add('blur');
+      popUp.style.display = 'flex';
+  }
+   </script> -->
 
 </body>
 </html> 
