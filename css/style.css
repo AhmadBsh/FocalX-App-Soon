@@ -391,7 +391,7 @@ footer .socialIcons ul li img::selection{
       }
 
      .popUp{
-         display: none;
+         display: flex;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -414,7 +414,7 @@ footer .socialIcons ul li img::selection{
         border-radius: 16px;
     }
     .blur{
-        filter: blur(3px);
+        filter: blur();
     }
     .popUp img{
         width: 48px;
@@ -481,18 +481,12 @@ footer .socialIcons ul li img::selection{
         font-size: 10.91px;
         padding-bottom: 0.5rem;
         font-family: Tajawal;
-         direction: rtl;
     }
 
     .closing {
         direction: ltr;
         column-gap: 7px;
     }
-    .closing_AR {
-        direction: rtl;
-        column-gap: 20px;
-    }
-
     .container{
         /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
         margin: 0;
