@@ -17,21 +17,19 @@
     height: 100vh;
     z-index: -4;
   }
-  .bg_img img {
+.bg_img img {
     width: 100%;
     height: 100%;
   }
-/* body{
-   width: 100vw; 
-   height: 100vh;
-   background-image: url('../img/mainbackground.jpg');
-   background-position: top center;
-   background-size: cover;
-   background-repeat: no-repeat;
-   color: #fff;
-   margin: 0;
-} */
-
+.bg_img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
 .large-header {
     height: 100vh;
     width: 100vw;
@@ -71,7 +69,7 @@ p::selection {
     font-family: 'Montserrat', sans-serif;
 }
 .blur{
-    filter: blur();
+    filter: blur(5px);
 }
 .popUp img{
     width: 69px;
@@ -175,7 +173,7 @@ p::selection {
     color:rgba(255, 133, 0, 1);
     font-weight: 700;
 }
-.subscribe{
+.wrapper .subscribe{
     padding-top: 32px;
     display: flex;
     flex-direction: column;
@@ -187,10 +185,11 @@ p::selection {
     font-weight: 500;
     line-height: 150.9%;
     padding-bottom:10px;
+    padding-top: 0px;
 }
 form{
     display:flex;
-    justify-content:center;
+    justify-content:left;
     align-items:center;
 }
 form .input{
@@ -287,7 +286,6 @@ footer .socialIcons ul li img::selection{
     font-family: 'Tajawal', sans-serif;
     text-align: right;
     width: 515px;
-    margin-left: 12px;
 }
 
 .wrapper_AR section .title{
@@ -363,18 +361,116 @@ footer .socialIcons ul li img::selection{
         display: inline;
     }
 
-    /* body{
-        background-image: url('../img/mainbackgroundM2.png' )  ;
-        background-size: cover;
-        background-repeat: no-repeat;
+     /* .bg_img img {
+        content:url("/img/mainbackgroundM2.png");
+     }
+     .bg_img::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+      } */
+
+     .popUp{
+         display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        z-index: 100;
+        width: 316px;
+        height: 167px;
+        background-color: #fff;
+        color: #000;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 15px;
+        font-family: 'Montserrat', sans-serif;
+        column-gap: 15px;
+    }
+     .popUp_AR{
+        width: 336px;
+        height: 178.36px;
+        border-radius: 16px;
+    }
+    .blur{
+        filter: blur(3px);
+    }
+    .popUp img{
+        width: 48px;
+        height: 48px;
+        content: url("../img/trueM.svg");
+    }
+    .popUp p{
+        text-align: center;
+        font-weight: 500;
+        line-height: 19px;
+        font-size: 10px;
+    }
+    .popUp .popUp_text_AR{
+        text-align: center;
+        font-weight: 500;
+        font-family: 'Tajawal';
+        font-style: normal;
+        font-size: 12.1336px;
+        line-height: 183.4%;
+        direction: rtl;
+
+
+    }
+    .popUp div{
         display: flex;
         justify-content: center;
-        align-items: flex-start;
-        width: 100vw; 
-        height: 100%;
-        color: #fff;
+        align-items: flex-end;
+        padding-top: 0px;
+        column-gap: 7px;
     }
-     */
+    .popUp div .close{
+        background-color:  #8B8B8B;
+        color: #fff;
+        font-size: 0.796rem;
+        font-weight: 700;
+        width: 100px;
+        height: 30px;
+        border: none;
+        border-radius: 8px;
+        /* cursor: pointer; */
+    }
+    .popUp div .close_AR{
+        background-color:  #8B8B8B;
+        color: #fff;
+        font-size: 13.09px;
+        font-weight: 700;
+        line-height: 19.75px;
+        width: 88px;
+        height: 33px;
+        border: none;
+        border-radius: 8px;
+        font-family: Tajawal;
+        /* cursor: pointer; */
+    }
+    .popUp div a{
+        color: #FF8500;
+        font-weight: 500;
+        font-size: 0.621rem;
+        padding-bottom: 0.5rem;
+    }
+    .popUp div .close_web_AR{
+        color: #FF8500;
+        font-weight: 500;
+        font-size: 10.91px;
+        padding-bottom: 0.5rem;
+        font-family: Tajawal;
+    }
+
+    .closing {
+        direction: ltr;
+        column-gap: 7px;
+    }
     .container{
         /* background: linear-gradient(90.14deg, rgba(0, 0, 0, 0.77) 14.23%, rgba(0, 0, 0, 0) 74.85%, rgba(0, 0, 0, 0) 74.85%);; */
         margin: 0;
@@ -470,10 +566,19 @@ footer .socialIcons ul li img::selection{
     }
 
     .wrapper_AR .p2{
-        margin-top: 40px;
+        margin-top: 13px;
         padding-top: 0px;
         font-size: 1.1rem;
     }
+
+    .wrapper .p2{
+        padding-top: 27px;
+    }
+
+    .wrapper .subscribe{
+        padding-top: 27px;
+    }
+    
     .wrapper_AR .p1 {
         font-weight: 400;
 
