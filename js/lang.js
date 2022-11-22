@@ -46,10 +46,10 @@ let htmlAR = `
  <p class="p2">تعرف علينا أكثر وقم بزيارة موقع شركتنا من <a href="https://focal-x.com/" target="_blank"><span>هنا</span></a></p>
 </section>
 `
-if (window.matchMedia('screen and (max-width: 400px)').matches) {
+if (window.matchMedia('screen and (max-width: 500px)').matches) {
     bg_img.src='./img/mainbackgroundM2.png'
 }
-if (!window.matchMedia('screen and (max-width: 400px)').matches) {
+if (!window.matchMedia('screen and (max-width: 500px)').matches) {
     bg_img.src='./img/mainbackground.jpg'
 }
 EN_btn.addEventListener('click',()=>{

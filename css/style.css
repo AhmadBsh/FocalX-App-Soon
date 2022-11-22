@@ -376,7 +376,7 @@ footer .socialIcons ul li img::selection{
     }
      */
      .bg_img img {
-        content:url("img/mainbackgroundM2.png");
+        /* content:url("img/mainbackgroundM2.png"); */
 
         
      }
@@ -419,7 +419,7 @@ footer .socialIcons ul li img::selection{
     .popUp img{
         width: 48px;
         height: 48px;
-        content: url("img/trueM.svg");
+        /* content: url("img/trueM.svg"); */
     }
     .popUp p{
         text-align: center;
