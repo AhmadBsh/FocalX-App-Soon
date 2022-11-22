@@ -64,7 +64,7 @@ p::selection {
     background-color: #fff;
     color: #000;
     display: none;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     border-radius: 27px;
@@ -86,7 +86,6 @@ p::selection {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    padding-top: 13px;
     column-gap: 13px;
 }
 .popUp div .close{
@@ -104,6 +103,8 @@ p::selection {
     color: #FF8500;
     font-weight: 500;
     font-size: 1.119rem;
+    padding-bottom: 0.5rem;
+
 }
 .container{
     color: #fff;
@@ -224,7 +225,7 @@ form .btn{
     width:130px;
     height:40px;
     margin-left:-10px;
-    padding:8px ;
+    padding:6px ;
     font-weight: 700;
 }
 .counter{
@@ -489,7 +490,7 @@ footer .socialIcons ul li img::selection{
         direction: ltr;
         column-gap: 7px;
     }
-    .closing_AR {
+    .popUp .closing_ARM {
         direction: rtl;
         column-gap: 20px;
     }

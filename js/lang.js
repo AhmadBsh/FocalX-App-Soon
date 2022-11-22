@@ -141,7 +141,7 @@ AR_btn.addEventListener('click',()=>{
         شكراً لثقتك بنا.
         <br>
         سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.        </p>
-        <div>
+        <div style=" column-gap: 33px;">
         <a style="font-family:'Tajawal', sans-serif;" dir='rtl' target="_blank" href="https://focal-x.com/" >أو يمكنك المتابعة لموقعنا الرسمي</a>
           <button style="font-family:'Tajawal', sans-serif;" dir='rtl' class="close" id="close_ar">إغلاق</button>
         </div>`
@@ -160,9 +160,9 @@ AR_btn.addEventListener('click',()=>{
         <p class='popUp_text_AR'>
         شكراً لثقتك بنا. <br> سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.
         </p>
-        <div class="closing_AR">
+        <div class="closing_ARM">
           <button  class="close_AR" id="close_ar">إغلاق</button>
-        <a class="close_web_AR" target="_blank" href="https://focal-x.com/" >'أو يمكنك المتابعة لموقعنا الرسمي</a>
+        <a class="close_web_AR" target="_blank" href="https://focal-x.com/" >أو يمكنك المتابعة لموقعنا الرسمي</a>
         </div>`
         
     }
