@@ -8,11 +8,14 @@ let container = document.querySelector('#container')
 let counter_block = document.querySelector('#counter_block')
 let contact = document.querySelector('#contact')
 let socialIcons = document.querySelector('#socialIcons')
-let popUp = document.querySelector('.popUp')
+let popUp = document.querySelector('#popUp')
 let popUp_text = document.querySelector('.popUp_text')
 let closee = document.querySelector('.close')
 let closing = document.querySelector('.closing')
-let close_web = document.querySelector('.close_web')
+let close_web = document.querySelector('.close_a')
+let subscribe_btn_M = document.querySelectorAll('.btn')
+let bg_img = document.querySelector('#bg_img')
+
 
 let htmlEN = `
 <section>
@@ -81,21 +84,33 @@ EN_btn.addEventListener('click',()=>{
         contact.innerHTML='<p class="MB" id="contact">Keep In Touch:</p>'
         socialIcons.classList.remove('socialIcons_AR')
         footer_p.innerHTML='<p>© 2021 - 2022 <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> All Right Reserved</p>'
-        popUp_text.classList.add('popUp_text')
-        popUp_text.classList.remove('popUp_text_AR')
-        popUp_text.innerHTML=' Thank you for trusting us. <br> You will be notified when we launch the website.'
-        closing.style.direction='ltr';
-        closing.style.columnGap='7px';
-        closee.classList.add('close')
-        closee.classList.remove('close_AR')
-        closee.innerHTML='Close'
-        close_web.style.direction='ltr';
-        close_web.classList.add('close_web')
-        close_web.classList.remove('close_web_AR')
-        close_web.innerHTML='OR Countine to Our Website'
-        popUp.classList.add('popUp')
-        popUp.classList.remove('popUp_AR')
-
+       popUp.innerHTML= ` <img src="img/trueM.svg" alt="">
+       <p class='popUp_text'>
+         Thank you for trusting us. <br> You will be notified when we launch the website.
+       </p>
+       <div class="closing">
+         <button  class="close" id="close">Close</button>
+       <a class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
+       </div>`
+        
+    }
+let close = document.querySelector('#close')
+let popUpMsg = document.querySelector('#popUp')
+let subscribe = document.querySelector('#btn_subscribe')
+let bg_img_div = document.querySelector('.bg_img')
+let containerr = document.querySelector('#container')
+    close.addEventListener('click',(e)=>{
+        e.preventDefault()
+        popUpMsg.style.display = 'none'
+        bg_img_div.classList.remove('blur')
+        containerr.classList.remove('blur');
+    });
+    
+    const onSubscribe = (e)=>{
+        e.preventDefault()
+        bg_img.classList.add('blur');
+        containerr.classList.add('blur');
+        popUpMsg.style.display = 'flex';
     }
     subscribe.addEventListener('click', onSubscribe);
     
@@ -131,6 +146,7 @@ AR_btn.addEventListener('click',()=>{
           <button style="font-family:'Tajawal', sans-serif;" dir='rtl' class="close" id="close_ar">إغلاق</button>
         </div>`
     }
+   
     if (window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='21px';
         counter_block.classList.add('not_MB')
@@ -139,18 +155,33 @@ AR_btn.addEventListener('click',()=>{
         contact.innerHTML='<p class="contact_AR" dir="rtl">ابقوا على إطلاع من خلال متابعتنا:</p>'
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'
-        popUp_text.classList.add('popUp_text_AR')
-        popUp_text.classList.remove('popUp_text')
-        popUp_text.innerHTML='شكراً لثقتك بنا. <br> سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.'
-        closing.style.direction='rtl';
-        closing.style.columnGap='20px';
-        closee.classList.add('close_AR')
-        closee.classList.remove('close')
-        closee.innerHTML='إغلاق'
-        close_web.style.direction='rtl';
-        close_web.classList.add('close_web_AR')
-        close_web.classList.remove('close_web')
-        close_web.innerHTML='أو يمكنك المتابعة لموقعنا الرسمي'
         popUp.classList.add('popUp_AR')
+        popUp.innerHTML=` <img src="img/trueM.svg" alt="">
+        <p class='popUp_text_AR'>
+        شكراً لثقتك بنا. <br> سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.
+        </p>
+        <div class="closing_AR">
+          <button  class="close_AR" id="close_ar">إغلاق</button>
+        <a class="close_web_AR" target="_blank" href="https://focal-x.com/" >'أو يمكنك المتابعة لموقعنا الرسمي</a>
+        </div>`
+        
     }
+let containerr = document.querySelector('#container')   
+ let subscribeAR = document.querySelector('#btn_subscribe_AR')
+ let popUpMsg = document.querySelector('#popUp')
+let closeAR = document.querySelector('#close_ar')
+closeAR.addEventListener('click',(e)=>{
+    e.preventDefault()
+    popUpMsg.style.display = 'none'
+        bg_img.classList.remove('blur')
+        containerr.classList.remove('blur');
+})
+const onSubscribe = (e)=>{
+    e.preventDefault()
+    popUpMsg.style.display = 'flex';
+    bg_img.classList.add('blur');
+    containerr.classList.add('blur');
+}
+subscribeAR.addEventListener('click', onSubscribe);
+
 })
