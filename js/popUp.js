@@ -7,18 +7,18 @@ close.addEventListener('click',()=>{
     popUpMsg.style.display = 'none'
     bg_img__c.classList.remove('blur')
     containerr.classList.remove('blur');
-    container.style.pointerEvents= 'auto';
+    containerr.style.pointerEvents= 'auto';
 
 });
 
 const onSubscribe = (e)=>{
-    e.preventDefault()
+    /* e.preventDefault() */
     bg_img__c.classList.add('blur');
     containerr.classList.add('blur');
     popUpMsg.style.display = 'flex';
-    container.style.pointerEvents= 'none';
+    containerr.style.pointerEvents= 'none';
 
 }
-subscribe.addEventListener('click', onSubscribe);
+/* subscribe.addEventListener('click', onSubscribe); */
 
 
