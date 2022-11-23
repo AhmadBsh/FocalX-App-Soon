@@ -11,7 +11,7 @@ close.addEventListener('click',()=>{
 
 });
 
-const onSubscribe = (e)=>{
+var onSubscribe = (e)=>{
     /* e.preventDefault() */
     bg_img__c.classList.add('blur');
     containerr.classList.add('blur');
