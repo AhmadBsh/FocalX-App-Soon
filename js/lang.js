@@ -1,4 +1,4 @@
-const translations = {
+var translations = {
     en: {
       Thank: "Thank you for trusting us.",
       You: "You will be notified when we launch the website.",
@@ -172,15 +172,15 @@ AR_btn.addEventListener('click',()=>{
     }
 })
 
-const setLanguage = (language) => {
-    const elements = document.querySelectorAll("[data-tr]");
-    const placeholder = document.querySelector("[placeholder]");
+var setLanguage = (language) => {
+    var elements = document.querySelectorAll("[data-tr]");
+    var placeholder = document.querySelector("[placeholder]");
     elements.forEach((element) => {
-      const translationKey = element.getAttribute("data-tr");
+      var translationKey = element.getAttribute("data-tr");
       element.textContent = translations[language][translationKey];
     });
-    if(language==`ar`){const email =document.getElementById("email");
+    if(language==`ar`){var email =document.getElementById("email");
     email.setAttribute("placeholder", `سّجل من خلال بريدك الالكتروني`);}
-    if(language==`en`){const email =document.getElementById("email");
+    if(language==`en`){var email =document.getElementById("email");
     email.setAttribute("placeholder", `Enter your E-mail to subscribe`);}
     }
