@@ -57,7 +57,7 @@
                 </p>
               </div>
             <form method="POST" id="fupForm" >
-              <input class="input" type="email" name="email" placeholder="Enter your E-mail to subscribe" id="email">
+              <input class="input"  type="email" name="email"  placeholder="Enter your E-mail to subscribe" id="email" required>
               <button class="btn" type="submit" value="Subscribe" name="subscribe_Submit" id="subscribe_Submit" data-tr="Subscribe">Subscribe</button>
             </form>
           </div>
@@ -112,9 +112,9 @@
     <script>
         $(document).ready(function() {
         $('#subscribe_Submit').on('click', function() {
-        $("#subscribe_Submit").attr("disabled", "disabled");
         var email = $('#email').val();
-        if(email!=""){
+        if(email!="" & type =="email"){
+          $("#subscribe_Submit").attr("disabled", "disabled");
         	$.ajax({
         		url: "subscribe.php",
         		type: "POST",
@@ -133,9 +133,9 @@
         		}
         	});
         	}
-        	else{
-        		alert('Please fill all the field !');
-        	}
+        	// else{
+        	// 	alert('Please fill all the field !');
+        	// }
         });
         });
     </script>
