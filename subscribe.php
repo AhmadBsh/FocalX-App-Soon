@@ -1,18 +1,15 @@
 <?php 
-session_start(); 
-
-$conn = mysqli_connect("localhost", "root", "", "emails");
-
-$email=$_POST['email'];
-$subscribe_Submit=$_POST['subscribe_Submit'];
-
-if(isset($subscribe_Submit)){
-if(isset($email)){
-    $insert=("INSERT INTO emails (id,email) VALUES ('','$email')");
-    $result = mysqli_query($conn, $insert);
-    header("Location: index.html");
-	exit();
-}   
-}
-header("Location: index.html");
-exit();
+		$servername = "localhost";
+        $username = "root";
+        $password = "";
+        $db="emails";
+        $conn = mysqli_connect($servername, $username, $password,$db);
+	$email=$_POST['email'];
+	$sql = "INSERT INTO `emails`( `id`, `email`) VALUES ('','$email')";
+	if (mysqli_query($conn, $sql)) {
+		echo json_encode(array("statusCode"=>200));
+	} 
+	else {
+		echo json_encode(array("statusCode"=>201));
+	}
+	mysqli_close($conn);
