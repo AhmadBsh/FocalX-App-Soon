@@ -23,30 +23,30 @@ const translations = {
     },
   };
 
-let wrapper = document.querySelector('#wrapper')
-let EN_btn = document.querySelector('#EN')
-let AR_btn = document.querySelector('#AR')
-let footer = document.querySelector('#footer')
-let footer_p = document.querySelector('#footer_p')
-let counterr = document.querySelector('#counter')
-let container = document.querySelector('#container')
-let counter_block = document.querySelector('#counter_block')
-let contact = document.querySelector('#contact')
-let socialIcons = document.querySelector('#socialIcons')
-let popUp = document.querySelector('#popUp')
-let popUp_text = document.querySelector('.popUp_text')
-let closee = document.querySelector('.close')
-let closing = document.querySelector('.closing')
-let close_web = document.querySelector('.close_a')
-let subscribe_btn_M = document.querySelectorAll('.btn')
-let bg_img = document.querySelector('#bg_img')
-let popf = document.querySelector('#popf')
-let btn = document.querySelector('.btn')
-let a = document.querySelector('#a')
-let form = document.querySelector('#fupForm')
+var wrapper = document.querySelector('#wrapper')
+var EN_btn = document.querySelector('#EN')
+var AR_btn = document.querySelector('#AR')
+var footer = document.querySelector('#footer')
+var footer_p = document.querySelector('#footer_p')
+var counterr = document.querySelector('#counter')
+var container = document.querySelector('#container')
+var counter_block = document.querySelector('#counter_block')
+var contact = document.querySelector('#contact')
+var socialIcons = document.querySelector('#socialIcons')
+var popUp = document.querySelector('#popUp')
+var popUp_text = document.querySelector('.popUp_text')
+var closee = document.querySelector('.close')
+var closing = document.querySelector('.closing')
+var close_web = document.querySelector('.close_a')
+var subscribe_btn_M = document.querySelectorAll('.btn')
+var bg_img = document.querySelector('#bg_img')
+var popf = document.querySelector('#popf')
+var btn = document.querySelector('.btn')
+var a = document.querySelector('#a')
+var form = document.querySelector('#fupForm')
 
 
-let htmlEN = `
+var htmlEN = `
 <section>
 <h1 class="title">New Era will Begin</h1>
 <p class="p1"> <strong>focal app solution</strong> will be a vast <br class="MB"> business gate in Syria,<br>
@@ -55,7 +55,7 @@ let htmlEN = `
 <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
 </section>
  `
-let htmlAR = `
+var htmlAR = `
 <section>
  <h1 class="title">عصر جديد سيبدأ معنا</h1>
  <p class="p1" dir="rtl">
@@ -101,7 +101,7 @@ EN_btn.addEventListener('click',()=>{
     setLanguage("en");
     wrapper.innerHTML=htmlEN;
     wrapper.classList.remove('wrapper_AR')
-    document.getElementById("subscribe").innerHTML=`<p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
+    document.getElementById("subscribe").innerHTML=`<p class="form_title">Subscribe to the newsvarter <br class="MB"> to stay in latest news
     </p>`;
     sb.classList.remove('sb_AR')
     btn.removeAttribute('lang');
