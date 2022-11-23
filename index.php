@@ -110,7 +110,7 @@
         </div>
 
     <script>
-        $(document).ready(function() {
+        $(document).ready(function() { 
         $('#subscribe_Submit').on('click', function() {
           $("#subscribe_Submit").attr("disabled", "disabled");
         var email = $('#email').val();
