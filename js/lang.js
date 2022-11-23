@@ -1,3 +1,28 @@
+const translations = {
+    en: {
+      Thank: "Thank you for trusting us.",
+      You: "You will be notified when we launch the website.",
+      Close: "Close",
+      OR: ` OR Countine to Our Website`,
+      Subscribe: `Subscribe`,
+/*       to: `Subscribe to the newsletter`,
+      stay: `to stay in latest news`, */
+    },
+    ar: {
+        Thank: "شكراً لثقتك بنا.",
+        You: "سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.",
+        Close: "إغلاق",
+        OR: ` أو يمكنك المتابعة لموقعنا الرسمي`,
+        Subscribe: `اشترك الآن`,
+/*         to: `اشترك الآن في النشرة الأخبارية ليصلك كل جديد
+        <br class="MB">
+        عن أخبار منصتنا
+        <span dir="rtl" class="MB">
+        و يوم انطلاقها.
+        </span>`, */
+    },
+  };
+
 let wrapper = document.querySelector('#wrapper')
 let EN_btn = document.querySelector('#EN')
 let AR_btn = document.querySelector('#AR')
@@ -15,6 +40,10 @@ let closing = document.querySelector('.closing')
 let close_web = document.querySelector('.close_a')
 let subscribe_btn_M = document.querySelectorAll('.btn')
 let bg_img = document.querySelector('#bg_img')
+let popf = document.querySelector('#popf')
+let btn = document.querySelector('.btn')
+let a = document.querySelector('#a')
+let form = document.querySelector('#fupForm')
 
 
 let htmlEN = `
@@ -57,26 +86,30 @@ EN_btn.addEventListener('click',()=>{
     EN_btn.classList.remove('de-active')
     AR_btn.classList.remove('active')
     AR_btn.classList.add('de-active')
+    form.removeAttribute('dir');
+    popUp.classList.add('popUp')
+    popUp.classList.remove('popUp_AR')
+    popUp_text.classList.remove('popUp_text_a')
+    popUp_text.classList.add('popUp_text')
+    popUp_text.removeAttribute('dir')
+    popf.classList.remove('popf-a');
+    a.removeAttribute('dir');
+    a.classList.remove('a-a');
+    a.classList.add('w');
+    closee.removeAttribute('dir');
+    closee.classList.remove('closeaa');
+    setLanguage("en");
     wrapper.innerHTML=htmlEN;
+    wrapper.classList.remove('wrapper_AR')
     document.getElementById("subscribe").innerHTML=`<p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
     </p>`;
-    document.querySelector("form").innerHTML=`<input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe">
-    <input id='btn_subscribe' class="btn" type="submit" value="Subscribe" name="Submit">`;
-    wrapper.classList.remove('wrapper_AR')
     sb.classList.remove('sb_AR')
+    btn.removeAttribute('lang');
     footer.classList.remove('AR_footer')
     if (!window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='33px';
-        popUp.innerHTML=`<img src="img/true.svg" alt="">
-        <p style="font-family:'Montserrat', sans-serif;" class='popUp_text'>
-          Thank you for trusting us. <br> You will be notified when we launch the website.
-        </p>
-        <div>
-          <button style="font-family:'Montserrat', sans-serif;" class="close" id="close">Close</button>
-        <a style="font-family:'Montserrat', sans-serif;" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
-        </div>`
-        
     }
+
     if (window.matchMedia('screen and (max-width: 500px)').matches) {
         counter_block.classList.add('not_MB')
         counterr.classList.add('counter_MB')
@@ -84,50 +117,18 @@ EN_btn.addEventListener('click',()=>{
         contact.innerHTML='<p class="MB" id="contact">Keep In Touch:</p>'
         socialIcons.classList.remove('socialIcons_AR')
         footer_p.innerHTML='<p>© 2021 - 2022 <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> All Right Reserved</p>'
-       popUp.innerHTML= ` <img src="img/trueM.svg" alt="">
-       <p class='popUp_text'>
-         Thank you for trusting us. <br> You will be notified when we launch the website.
-       </p>
-       <div class="closing">
-         <button  class="close" id="close">Close</button>
-       <a class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
-       </div>`
-        
-    }
-let close = document.querySelector('#close')
-let popUpMsg = document.querySelector('#popUp')
-let subscribe = document.querySelector('#btn_subscribe')
-// let bg_img_div = document.querySelector('.bg_img')
-let containerr = document.querySelector('#container')
-    close.addEventListener('click',(e)=>{
-        e.preventDefault()
-        popUpMsg.style.display = 'none'
-        bg_img.classList.remove('blur')
-        containerr.classList.remove('blur');
-        container.style.pointerEvents = 'auto';
-
-    });
-    
-    const onSubscribe = (e)=>{
-        e.preventDefault()
-        bg_img.classList.add('blur');
-        containerr.classList.add('blur');
-        popUpMsg.style.display = 'flex';
-        container.style.pointerEvents = 'none';
-
-    }
-    subscribe.addEventListener('click', onSubscribe);
-    
+    }    
 })
+
 AR_btn.addEventListener('click',()=>{
     AR_btn.classList.add('active')
     AR_btn.classList.remove('de-active')
     EN_btn.classList.remove('active')
     EN_btn.classList.add('de-active')
+    form.setAttribute('dir' , 'rtl');
+    setLanguage("ar");
     wrapper.innerHTML=htmlAR;
     wrapper.classList.add('wrapper_AR');
-    sb=document.getElementById("sb");
-    sb.classList.add('sb_AR');
     document.getElementById("subscribe").innerHTML=`<p dir="rtl" class="form_title">اشترك الآن في النشرة الأخبارية ليصلك كل جديد
     <br class="MB">
     عن أخبار منصتنا
@@ -135,20 +136,28 @@ AR_btn.addEventListener('click',()=>{
     و يوم انطلاقها.
     </span>
     </p>`;
-    document.querySelector("form").innerHTML=`<input id='btn_subscribe_AR' lang="ar" class="btn " type="submit" value="اشترك الآن" name="Submit">
-    <input class="input" type="email" name="Email" placeholder="سّجل من خلال بريدك الالكتروني">`;
+    sb=document.getElementById("sb");
+    sb.classList.add('sb_AR');
+    btn.setAttribute('lang' , 'ar');
     footer.classList.add('AR_footer')
+    popUp_text.setAttribute('dir' , 'rtl');
+    popUp_text.classList.add('popUp_text_a');
+    popUp_text.classList.remove('popUp_text');
+    popf.classList.add('popf-a');
+    a.setAttribute('dir' , 'rtl');
+    a.classList.add('a-a');
+    a.classList.remove('w');
+    closee.setAttribute('dir' , 'rtl');
+    closee.classList.add('closeaa');
     if (!window.matchMedia('screen and (max-width: 500px)').matches) {
         counterr.style.columnGap='37px';
-        popUp.innerHTML=`<img src="img/true.svg" alt="">
-        <p style="font-family:'Tajawal', sans-serif;" dir='rtl' class='popUp_text'>
-        شكراً لثقتك بنا.
-        <br>
-        سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.        </p>
-        <div style=" column-gap: 33px;">
-        <a style="font-family:'Tajawal', sans-serif;" dir='rtl' target="_blank" href="https://focal-x.com/" >أو يمكنك المتابعة لموقعنا الرسمي</a>
-          <button style="font-family:'Tajawal', sans-serif;" dir='rtl' class="close" id="close_ar">إغلاق</button>
-        </div>`
+        popUp_text.setAttribute('dir' , 'rtl');
+        popUp_text.classList.add('popUp_text_a');
+        popf.classList.add('popf-a');
+        a.setAttribute('dir' , 'rtl');
+        a.classList.add('a-a');
+        closee.setAttribute('dir' , 'rtl');
+        closee.classList.add('closeaa');
     }
    
     if (window.matchMedia('screen and (max-width: 500px)').matches) {
@@ -160,36 +169,18 @@ AR_btn.addEventListener('click',()=>{
         socialIcons.classList.add('socialIcons_AR')
         footer_p.innerHTML='<p dir="rtl">©2021 - 2022 جميع حقوق النشر محفوظة لـــ <a href="https://focal-x.com/" target="_blank">focal X L.L.C</a> </p>'
         popUp.classList.add('popUp_AR')
-        popUp.innerHTML=` <img src="img/trueM.svg" alt="">
-        <p class='popUp_text_AR'>
-        شكراً لثقتك بنا. <br> سيتم مراسلتك عندما نقوم بإطلاق الموقع الالكتروني.
-        </p>
-        <div class="closing_ARM">
-          <button  class="close_AR" id="close_ar">إغلاق</button>
-        <a class="close_web_AR" target="_blank" href="https://focal-x.com/" >أو يمكنك المتابعة لموقعنا الرسمي</a>
-        </div>`
-        
     }
-let containerr = document.querySelector('#container')   
- let subscribeAR = document.querySelector('#btn_subscribe_AR')
- let popUpMsg = document.querySelector('#popUp')
-let closeAR = document.querySelector('#close_ar')
-closeAR.addEventListener('click',(e)=>{
-    e.preventDefault()
-    popUpMsg.style.display = 'none'
-        bg_img.classList.remove('blur')
-        containerr.classList.remove('blur');
-        container.style.pointerEvents = 'auto';
-
 })
-const onSubscribe = (e)=>{
-    e.preventDefault()
-    popUpMsg.style.display = 'flex';
-    bg_img.classList.add('blur');
-    containerr.classList.add('blur');
-    container.style.pointerEvents = 'none';
 
-}
-subscribeAR.addEventListener('click', onSubscribe);
-
-})
+const setLanguage = (language) => {
+    const elements = document.querySelectorAll("[data-tr]");
+    const placeholder = document.querySelector("[placeholder]");
+    elements.forEach((element) => {
+      const translationKey = element.getAttribute("data-tr");
+      element.textContent = translations[language][translationKey];
+    });
+    if(language==`ar`){const email =document.getElementById("email");
+    email.setAttribute("placeholder", `سّجل من خلال بريدك الالكتروني`);}
+    if(language==`en`){const email =document.getElementById("email");
+    email.setAttribute("placeholder", `Enter your E-mail to subscribe`);}
+    }

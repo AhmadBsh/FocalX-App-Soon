@@ -11,6 +11,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Montserrat:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery.min.js"></script>
     <title>Document</title>
     
 </head>
@@ -21,6 +22,18 @@
   
   <div id="large-header" class="large-header not_MB">
     <canvas id="demo-canvas"></canvas> 
+  </div>
+  <div id="popUp" class="popUp">
+          <img src="img/true.svg" alt="">
+          <p class='popUp_text'>
+            <span data-tr="Thank">Thank you for trusting us.</span>
+             <br>
+             <span data-tr="You">You will be notified when we launch the website.</span> 
+          </p>
+          <div id="popf">
+            <button  class="close" id="close" data-tr="Close">Close</button>
+          <a target="_blank" href="https://focal-x.com/" data-tr="OR" id="a" class="w">OR Countine to Our Website </a>
+          </div>
   </div>
     <div class="container " id="container">
         <header id="header">
@@ -35,18 +48,18 @@
             <p class="p1"> <strong>focal app solution</strong> will be a vast <br class="MB"> business gate in Syria,<br>
                 a safe place for you if you are: <br class="MB">Business owner, Freelancer,<br>
                 job seeker, designer, marketer,<br class="MB"> developer, or blogger.</p>
-            <p class="p2">Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
+            <p class="p2"> Also you can check our company<br class="MB"> website from <a href="https://focal-x.com/" target="_blank"><span>HERE</span></a></p>
            </section>
           </div>
           <div class="sb" id="sb">
-            <div id="subscribe" class="subscribe">
-              <p class="form_title">Subscribe to the newsletter <br class="MB"> to stay in latest news
-              </p>
-          </div>
-          <form method="POST" action="">
-            <input class="input" type="email" name="Email" placeholder="Enter your E-mail to subscribe" >
-            <input id="subscribe_Submit" class="btn" type="submit" value="Subscribe" name="Submit">
-        </form>
+              <div id="subscribe" class="subscribe">
+                <p class="form_title">Subscribe to the newsletter<br class="MB"> to stay in latest news
+                </p>
+              </div>
+            <form method="POST" id="fupForm" >
+              <input class="input" type="email" name="email" placeholder="Enter your E-mail to subscribe" id="email">
+              <button class="btn" type="submit" value="Subscribe" name="subscribe_Submit" id="subscribe_Submit" data-tr="Subscribe">Subscribe</button>
+            </form>
           </div>
           <div class="counter counter_MB" id='counter'>
               <div class="months block">
@@ -95,17 +108,37 @@
                 </div>
           </footer>
         </div>
-        <div id="popUp" class="popUp">
-          <img src="img/true.svg" alt="">
-          <p class='popUp_text'>
-            Thank you for trusting us. <br> You will be notified when we launch the website.
-          </p>
-          <div class="closing">
-            <button  class="close" id="close">Close</button>
-          <a class="close_a" target="_blank" href="https://focal-x.com/" >OR Countine to Our Website </a>
-          </div>
-        </div>
 
+    <script>
+        $(document).ready(function() {
+        $('#subscribe_Submit').on('click', function() {
+        $("#subscribe_Submit").attr("disabled", "disabled");
+        var email = $('#email').val();
+        if(email!=""){
+        	$.ajax({
+        		url: "subscribe.php",
+        		type: "POST",
+        		data: {email: email},
+        		cache: false,
+        		success: function(dataResult){
+        			var dataResult = JSON.parse(dataResult);
+        			if(dataResult.statusCode==200){
+        				$("#subscribe_Submit").removeAttr("disabled");
+                email = $('#email').val("");
+                onSubscribe();
+        			}
+        			else if(dataResult.statusCode==201){
+        				alert("Error occured !");
+        			}
+        		}
+        	});
+        	}
+        	else{
+        		alert('Please fill all the field !');
+        	}
+        });
+        });
+    </script>
     <script src="./js/main.js"></script>
     <script src="js/TweenLite.min.js"></script>
     <script src="js/EasePack.min.js"></script>
