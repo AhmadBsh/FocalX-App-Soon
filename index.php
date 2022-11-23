@@ -112,9 +112,9 @@
     <script>
         $(document).ready(function() {
         $('#subscribe_Submit').on('click', function() {
-        var email = $('#email').val();
-        if(email!="" & type =="email"){
           $("#subscribe_Submit").attr("disabled", "disabled");
+        var email = $('#email').val();
+        if(email!="" ){
         	$.ajax({
         		url: "subscribe.php",
         		type: "POST",
@@ -133,9 +133,10 @@
         		}
         	});
         	}
-        	// else{
-        	// 	alert('Please fill all the field !');
-        	// }
+        	else{
+        		// alert('Please fill all the field !');
+            $("#subscribe_Submit").removeAttr("disabled");
+        	}
         });
         });
     </script>
