@@ -323,7 +323,6 @@ footer .socialIcons ul li img::selection{
     background: rgba(255, 255, 255, 0.24);
     border-radius:7px;
     border:none;
-    color: #FF8500;
     font-size: 0.8rem;
     font-weight: 400;
 }
